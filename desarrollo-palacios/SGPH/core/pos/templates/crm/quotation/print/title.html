@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            color: black;
+        }
+
+        .name-company {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        table thead tr th {
+            border: 1px solid black !important;
+            padding: 3px;
+        }
+
+        table tbody tr td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .img-logo {
+            margin-top: 10px;
+            width: 170px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .cur{
+            font: oblique bold 120% cursive;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <img src="{{ company.get_image }}" class="img-fluid d-block mx-auto img-logo">
+        <br><br>
+        
+
+       
+    {% if sale.payment_condition == 'contado' %}
+    <h2 class="text-center"><b>TÍTULO DE PROPIEDAD</b></h2>
+    <h5 class="text-center">CERTIFICAMOS QUE</h5>
+    
+        <h2 class="text-center"><b>{{ sale.client.user.get_full_name }}</b></h2><br>
+        <p class="text-center"> 
+        SIENDO CLIENTE NUESTRO CON C.I <b>{{ sale.client.user.dni }}</b> ADQUIRIÓ DE NUESTRA<br>
+        EMPRESA "CRÉDITOS PALACIO DEL HOGAR" UN/UNA 
+        {% for det in sale.saledetail_set.all %}
+        <b>{{ det.product.name }}</b>
+        {% endfor %}
+        </br>
+        <br>
+        <b>HABIENDO SIDO CANCELADO EN SU TOTALIDAD, EXTENDEMOS</b></br>
+        <b>EL PRESENTE TÍTULO DE SU EXCLUSIVA PROPIEDAD</b></br>
+        <br>
+        <!--<b>NO. FACTURA:</b> {{ sale.id }}<br>
+        <b>Cajero:</b> {{ sale.employee.get_full_name }}<br>
+        <b>Cliente:</b> {{ sale.client.user.get_full_name }}<br>
+        <b>Número de cedula:</b> {{ sale.client.user.dni }}<br>-->
+        <b>{{ sale.date_joined|date:'c' }}</b><br><br>
+        <b class="cur">Alberto Fuela V.</b><br>
+        <b>-------------------------</b><br>
+        <b>Gerente</b><br>
+        
+           <!-- <b>Método de pago:</b> {{ sale.get_payment_method_display }}<br>-->
+        {% else %}
+        {{ sale.date_joined|date:'c' }}<br><br>
+            <h2 class="text-center"><b>ACTA DE RECEPCIÓN Y COMPROMISO</b></h2>
+            <br>
+        <p > 
+        YO <b>{{ sale.client.user.get_full_name }}</b> CON C.I <b>{{ sale.client.user.dni }}</b><br>
+        He comprado en "CRÉDITOS PALACIO DEL HOGAR":<br> 
+        {% for det in sale.saledetail_set.all %}
+        <b> - {{ det.product.name }}</b><br>
+        {% endfor %}
+        </br>
+        Y lo estoy recibiendo en perfectas condiciones, sin ningún desperfecto, rayón o golpe, he comprobado que funciona en su</br>
+        totalidad haciendo las pruebas debidas con el personal de Créditos Palacio del Hogar.</br>
+        <br>
+        Como he recibido el/los producto/s en perfectas condiciones es mi responsabilidad del mismo, si el producto se llegase<br>
+        a romper o trizar deberé seguir cancelando el producto porque lo recibí en perfectas condiciones y sé que no hay garantía<br>
+        por negligencia mía y debo cancelar igualmente toda la deuda.<br>
+        <br>
+        <br>
+        <p class="text-center">
+        Atte.,<br><br><br>
+
+
+        _____________________<br>
+       
+        <b>{{ sale.client.user.get_full_name }}</b><br>
+        <b>C.I {{ sale.client.user.dni }}</b><br></p>
+            <!--<b>Fecha limite de credito:</b> {{ sale.end_credit|date:'c' }}<br>-->
+        {% endif %}
+    </p>
+    <!--<table class="table" style="width: 100%;">
+        <thead>
+        <tr style="border: 1px solid black;">
+            <th style="width: 10%;">Cantidad</th>
+            <th style="width: 45%;">Producto</th>
+            <th style="width: 15%;">P.Unitario</th>
+            <th style="width: 15%;">Dscto</th>
+            <th style="width: 15%;" class="text-right">Subtotal</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for det in sale.saledetail_set.all %}
+            <tr>
+                <td class="text-center">{{ det.cant }}</td>
+                <td>{{ det.product.name }}</td>
+                <td class="text-center">{{ det.price|floatformat:2 }}</td>
+                <td class="text-center">{{ det.total_dscto|floatformat:2 }}</td>
+                <td class="text-right">{{ det.total|floatformat:2 }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4" class="text-right"><b>Subtotal</b></td>
+            <td class="text-right">{{ sale.subtotal|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right"><b>Iva {{ sale.iva|floatformat:2 }}%</b></td>
+            <td class="text-right">{{ sale.total_iva|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right"><b>Descuento {{ sale.dscto|floatformat:2 }}%</b></td>
+            <td class="text-right">{{ sale.total_dscto|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right"><b>Total a pagar</b></td>
+            <td class="text-right">{{ sale.total|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                {% if sale.payment_condition == 'contado' %}
+                    <p class="text-uppercase text-center mb-0 pb-0">
+                        ****** estimado cliente no olvide que ******
+                        <br>
+                        {% if sale.payment_method == 'efectivo' %}
+                            Usted va a pagar en efectivo un total de {{ sale.cash }}<br>
+                            Por lo tanto debe recibir un vuelto de {{ sale.change }}<br>
+                        {% elif sale.payment_method == 'tarjeta_debito_credito' %}
+                            Se le va a descontar de su tarjeta un monto de {{ sale.amount_debited }}<br>
+                        {% elif sale.payment_method == 'efectivo_tarjeta' %}
+                            Usted va a pagar en efectivo un total de {{ sale.cash }}<br>
+                            Y se le va a descontar de su tarjeta un monto de {{ sale.amount_debited }}<br>
+                        {% endif %}
+                        Total de productos {{ sale.saledetail_set.all.count }}
+                    </p>
+                {% endif %}
+            </td>
+        </tr>
+        </tbody>
+    </table>-->
+</div>
+</body>
+</html>

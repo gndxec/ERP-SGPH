@@ -1,0 +1,18 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'scm/refund/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Motivo</th>
+    <th>Producto</th>
+    <th>Serie</th>
+
+    <th class="text-center">Opciones</th>
+{% endblock %}
+
+ 
+{% block javascript_list %}
+
+{% endblock %}

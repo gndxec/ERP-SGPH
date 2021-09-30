@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            color: black;
+        }
+
+        .name-company {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        table thead tr th {
+            border: 1px solid black !important;
+            padding: 3px;
+        }
+
+        table tbody tr td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .img-logo {
+            margin-top: 10px;
+            width: 100;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <img src="{{ company.get_image }}" class="img-fluid d-block mx-auto img-logo">
+           {{ sale.date_joined|date:'c' }}<br><br>
+            <h3 class="text-center"><b>CONTRATO DE COMPRAVENTA CON RESERVA DE DOMINIO</b></h3>
+            <br>
+    
+        <p class="text-align"> 
+
+
+
+
+
+
+ </p>
+    
+</div>
+</body>
+</html>

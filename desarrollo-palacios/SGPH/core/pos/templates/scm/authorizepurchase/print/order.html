@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+            color: black;
+        }
+
+        .name-company {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        table thead tr th {
+            border: 1px solid black !important;
+            padding: 3px;
+        }
+
+        table tbody tr td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .img-logo {
+            margin-top: 10px;
+            width: 125px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <img src="{{ company.get_image }}" class="img-fluid d-block mx-auto img-logo">
+    <h1 class="name-company">{{ company.name }}</h1>
+    <p class="text-center">
+        {{ company.address }}<br>
+        Ruc: {{ company.ruc }}<br>
+        Celular: {{ company.phone }}<br>
+        Web: {{ company.website }}<br><br>
+        <h4 class="text-center"><b>Compra Autorizada</b></h4>
+    </p>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p>
+                    <b>Nº Orden:</b> {{sale.sucursal.serie}}-00000{{ sale.id }}<br>
+                    <b>Realizada por:</b>{{ sale.employee.get_full_name }}<br>
+                    <b>Proveedor:</b>{{ sale.provider.name }}<br>
+                    <b>Concepto:</b>{{ sale.concepto }}<br>
+                    <!--<b>Vendedor/a:</b> {{ sale.employee.get_full_name }}<br>
+                    <b>Cliente:</b> {{ sale.client.user.get_full_name }}<br>
+                    <b>Número de cédula:</b> {{ sale.client.user.dni }}<br>-->
+
+                </p>
+            </div>
+            <div class="col-6">
+                    <b>Fecha de Solicitud:</b> {{ sale.date_joined|date:'c' }}<br>
+                    <!--<b>Forma de pago:</b> {{ sale.get_payment_condition_display }}<br>-->
+                    <b>Sucursal:</b>{{sale.sucursal.name}}<br>
+
+                   <!--{% if sale.payment_condition == 'contado' %}
+                    {% else %}
+                     <div class="form-inline">
+                        <b>Plazo:</b>{{sale.plazo.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                        <b>Entrada:</b>{{sale.entrada}}<br>
+                    </div>
+                    {% endif %}-->
+            </div>
+        </div>
+    </div>
+    <br>
+<table class="table" style="width: 100%;">
+        <thead>
+        <tr style="border: 1px solid black;">
+            <th style="width: 10%;">Cantidad</th>
+            <th style="width: 45%;">Producto</th>
+            <th style="width: 15%;">P.Unitario</th>
+            <th style="width: 15%;" class="text-right">Subtotal</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for det in sale.purchaserequestdetail_set.all %}
+            <tr>
+                <td class="text-center">{{ det.cant }}</td>
+                <td>{{ det.product.name }}</td>
+                <td class="text-center">{{ det.price|floatformat:2 }}</td>
+                <td class="text-right">{{ det.subtotal|floatformat:2 }}</td>
+                <td class="text-right"></td>
+
+            </tr>
+        {% endfor %}
+        <tr>
+            <td colspan="4" class="text-right"><b>Subtotal</b></td>
+            <td class="text-right">{{ sale.subtotal|floatformat:2 }}</td>
+        </tr>
+       
+        <tr>
+            <td colspan="4" class="text-right"><b>Descuento </b></td>
+             <td class="text-right">{{ sale.dscto|floatformat:2 }}%</td>
+        </tr>
+         <tr>
+            <td colspan="4" class="text-right"><b>Iva</b></td>
+            <td class="text-right">{{ sale.iva|floatformat:2 }}%</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right"><b>Total</b></td>
+            <td class="text-right">{{ sale.total|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

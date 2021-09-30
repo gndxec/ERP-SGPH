@@ -1,0 +1,4532 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can view Acceso del usuario",
+    "content_type": 6,
+    "codename": "view_accessusers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can delete Acceso del usuario",
+    "content_type": 6,
+    "codename": "delete_accessusers"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can view Dashboard",
+    "content_type": 7,
+    "codename": "view_dashboard"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Respaldos de BD",
+    "content_type": 8,
+    "codename": "view_databasebackups"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Respaldos de BD",
+    "content_type": 8,
+    "codename": "add_databasebackups"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can delete Respaldos de BD",
+    "content_type": 8,
+    "codename": "delete_databasebackups"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can add Tipo de Módulo",
+    "content_type": 9,
+    "codename": "add_moduletype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can change Tipo de Módulo",
+    "content_type": 9,
+    "codename": "change_moduletype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can delete Tipo de Módulo",
+    "content_type": 9,
+    "codename": "delete_moduletype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can view Tipo de Módulo",
+    "content_type": 9,
+    "codename": "view_moduletype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can add Módulo",
+    "content_type": 10,
+    "codename": "add_module"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can change Módulo",
+    "content_type": 10,
+    "codename": "change_module"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can delete Módulo",
+    "content_type": 10,
+    "codename": "delete_module"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can view Módulo",
+    "content_type": 10,
+    "codename": "view_module"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 13,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 13,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 13,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 13,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can add Categoria",
+    "content_type": 14,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can change Categoria",
+    "content_type": 14,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can delete Categoria",
+    "content_type": 14,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can view Categoria",
+    "content_type": 14,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can add Cliente",
+    "content_type": 15,
+    "codename": "add_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can change Cliente",
+    "content_type": 15,
+    "codename": "change_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can delete Cliente",
+    "content_type": 15,
+    "codename": "delete_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can view Cliente",
+    "content_type": 15,
+    "codename": "view_client"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can view Company",
+    "content_type": 16,
+    "codename": "view_company"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Cuentas por cobrar",
+    "content_type": 17,
+    "codename": "view_ctascollect"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Cuentas por cobrar",
+    "content_type": 17,
+    "codename": "add_ctascollect"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can delete Cuentas por cobrar",
+    "content_type": 17,
+    "codename": "delete_ctascollect"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can view Cuentas por pagar",
+    "content_type": 18,
+    "codename": "view_debtspay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can add Cuentas por pagar",
+    "content_type": 18,
+    "codename": "add_debtspay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can delete Cuentas por pagar",
+    "content_type": 18,
+    "codename": "delete_debtspay"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can add Gasto",
+    "content_type": 19,
+    "codename": "add_expenses"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can change Gasto",
+    "content_type": 19,
+    "codename": "change_expenses"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can delete Gasto",
+    "content_type": 19,
+    "codename": "delete_expenses"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can view Gasto",
+    "content_type": 19,
+    "codename": "view_expenses"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can add Producto",
+    "content_type": 22,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can change Producto",
+    "content_type": 22,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can delete Producto",
+    "content_type": 22,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can view Producto",
+    "content_type": 22,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can add Promoción",
+    "content_type": 23,
+    "codename": "add_promotions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can change Promoción",
+    "content_type": 23,
+    "codename": "change_promotions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can delete Promoción",
+    "content_type": 23,
+    "codename": "delete_promotions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can view Promoción",
+    "content_type": 23,
+    "codename": "view_promotions"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can add Detalle Promoción",
+    "content_type": 24,
+    "codename": "add_promotionsdetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can change Detalle Promoción",
+    "content_type": 24,
+    "codename": "change_promotionsdetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can delete Detalle Promoción",
+    "content_type": 24,
+    "codename": "delete_promotionsdetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can view Detalle Promoción",
+    "content_type": 24,
+    "codename": "view_promotionsdetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can add Proveedor",
+    "content_type": 25,
+    "codename": "add_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can change Proveedor",
+    "content_type": 25,
+    "codename": "change_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can delete Proveedor",
+    "content_type": 25,
+    "codename": "delete_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can view Proveedor",
+    "content_type": 25,
+    "codename": "view_provider"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can view Compras",
+    "content_type": 26,
+    "codename": "view_purchase"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can add Compras",
+    "content_type": 26,
+    "codename": "add_purchase"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can delete Compras",
+    "content_type": 26,
+    "codename": "delete_purchase"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add Detalle de Compra",
+    "content_type": 27,
+    "codename": "add_purchasedetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change Detalle de Compra",
+    "content_type": 27,
+    "codename": "change_purchasedetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete Detalle de Compra",
+    "content_type": 27,
+    "codename": "delete_purchasedetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view Detalle de Compra",
+    "content_type": 27,
+    "codename": "view_purchasedetail"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can view Ventas",
+    "content_type": 28,
+    "codename": "view_sale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can add Ventas",
+    "content_type": 28,
+    "codename": "add_sale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete Ventas",
+    "content_type": 28,
+    "codename": "delete_sale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can add Tipo de Gasto",
+    "content_type": 29,
+    "codename": "add_typeexpense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can change Tipo de Gasto",
+    "content_type": 29,
+    "codename": "change_typeexpense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can delete Tipo de Gasto",
+    "content_type": 29,
+    "codename": "delete_typeexpense"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can view Tipo de Gasto",
+    "content_type": 29,
+    "codename": "view_typeexpense"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "security",
+    "model": "accessusers"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "security",
+    "model": "dashboard"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "security",
+    "model": "databasebackups"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "security",
+    "model": "moduletype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "security",
+    "model": "module"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "security",
+    "model": "grouppermission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "security",
+    "model": "groupmodule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "user",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "pos",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "pos",
+    "model": "client"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "pos",
+    "model": "company"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "pos",
+    "model": "ctascollect"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "pos",
+    "model": "debtspay"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "pos",
+    "model": "expenses"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "pos",
+    "model": "paymentsctacollect"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "pos",
+    "model": "paymentsdebtspay"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "pos",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "pos",
+    "model": "promotions"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "pos",
+    "model": "promotionsdetail"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "pos",
+    "model": "provider"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 26,
+  "fields": {
+    "app_label": "pos",
+    "model": "purchase"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 27,
+  "fields": {
+    "app_label": "pos",
+    "model": "purchasedetail"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 28,
+  "fields": {
+    "app_label": "pos",
+    "model": "sale"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 29,
+  "fields": {
+    "app_label": "pos",
+    "model": "typeexpense"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 30,
+  "fields": {
+    "app_label": "pos",
+    "model": "saledetail"
+  }
+},
+{
+  "model": "user.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$loMk3svza5o9Rl6rYFq2xN$LLRM3f150MlHpYOy0meoExalLxjA5wU6bV6ZSineTJ4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "0928745123",
+    "first_name": "Ana Gabriela",
+    "last_name": "Matute Guamán",
+    "email": "gabrielamatuteg1@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2021-08-30T14:42:31.228Z",
+    "dni": "0928745123",
+    "image": "",
+    "is_change_password": false,
+    "token": "6a7ec20e-f1c9-472d-85c6-f89adb135860",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "pos.provider",
+  "pk": 1,
+  "fields": {
+    "name": "EXPALSA S.A.",
+    "ruc": "03026622102",
+    "mobile": "0979021212",
+    "address": "Duran",
+    "email": "expalsa@gmail.com"
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 1,
+  "fields": {
+    "name": "SCHNEIDER",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 2,
+  "fields": {
+    "name": "SIN MARCA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 3,
+  "fields": {
+    "name": "SALTA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 4,
+  "fields": {
+    "name": "QUILM",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 5,
+  "fields": {
+    "name": "KINDER",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 6,
+  "fields": {
+    "name": "NIVEA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 7,
+  "fields": {
+    "name": "REXONA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 8,
+  "fields": {
+    "name": "DOVE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 9,
+  "fields": {
+    "name": "CORONA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 10,
+  "fields": {
+    "name": "OFF",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 11,
+  "fields": {
+    "name": "TITA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 12,
+  "fields": {
+    "name": "OPERA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 13,
+  "fields": {
+    "name": "MILKA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 14,
+  "fields": {
+    "name": "TERRABUSI",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 15,
+  "fields": {
+    "name": "CRIADORES",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 16,
+  "fields": {
+    "name": "HALLS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 17,
+  "fields": {
+    "name": "TRES PLUMAS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 18,
+  "fields": {
+    "name": "SHOT",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 19,
+  "fields": {
+    "name": "TOPLINE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 20,
+  "fields": {
+    "name": "BON O BON",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 21,
+  "fields": {
+    "name": "COFLER",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 22,
+  "fields": {
+    "name": "MENTO PLUS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 23,
+  "fields": {
+    "name": "MENTOPLUS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 24,
+  "fields": {
+    "name": "CARREFOUR",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 25,
+  "fields": {
+    "name": "VAUQUITA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 26,
+  "fields": {
+    "name": "CACHAFAZ",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 27,
+  "fields": {
+    "name": "TOP LINE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 28,
+  "fields": {
+    "name": "PLUSBELLE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 29,
+  "fields": {
+    "name": "ARCOR",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 30,
+  "fields": {
+    "name": "SHIMY",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 31,
+  "fields": {
+    "name": "BELDENT",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 32,
+  "fields": {
+    "name": "MENTHOPLUS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 33,
+  "fields": {
+    "name": "DANETTE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 34,
+  "fields": {
+    "name": "CELUSAL",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 35,
+  "fields": {
+    "name": "WASSINGTON",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 36,
+  "fields": {
+    "name": "SANCORITO",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 37,
+  "fields": {
+    "name": "PIPAS",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 38,
+  "fields": {
+    "name": "UNIQUIT",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 39,
+  "fields": {
+    "name": "MAPSA",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 40,
+  "fields": {
+    "name": "BIZNIKKE",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.category",
+  "pk": 41,
+  "fields": {
+    "name": "GUAYMALLEN",
+    "inventoried": true
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 1,
+  "fields": {
+    "name": "Cerveza Botella Schneider x 1 Un",
+    "category": 1,
+    "price": "2.00",
+    "pvp": "2.24",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 2,
+  "fields": {
+    "name": "REJILLA COMPACTA COL",
+    "category": 2,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 46
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 3,
+  "fields": {
+    "name": "REJ.SECAVAJ.43X55CM",
+    "category": 2,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 73
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 4,
+  "fields": {
+    "name": "REJILLA AUTO 50X50CM",
+    "category": 2,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 5,
+  "fields": {
+    "name": "LECHE L.V.ENTERA",
+    "category": 2,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 12
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 6,
+  "fields": {
+    "name": "Trapo Piso Blanco Consorcio x 1 Un",
+    "category": 2,
+    "price": "2.00",
+    "pvp": "2.24",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 7,
+  "fields": {
+    "name": "Trapo Piso Gris Consorcio x 1 Un",
+    "category": 2,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 65
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 8,
+  "fields": {
+    "name": "Trapo Piso Mil Usos x 1 Un",
+    "category": 2,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 40
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 9,
+  "fields": {
+    "name": "PAÃ‘O FRANELA CALIDAD",
+    "category": 2,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 10,
+  "fields": {
+    "name": "Cerveza Blanca Botella Salta x 1 Un",
+    "category": 3,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 11,
+  "fields": {
+    "name": "ESQUELETO CERV BLANC",
+    "category": 3,
+    "price": "9.00",
+    "pvp": "10.08",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 12,
+  "fields": {
+    "name": "Cerveza Negra Botella Salta x 1 Un",
+    "category": 3,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 13,
+  "fields": {
+    "name": "ESQUELETO CERV NEGRA",
+    "category": 3,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 6
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 14,
+  "fields": {
+    "name": "ENVASE CERVEZA 1890",
+    "category": 4,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 24
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 15,
+  "fields": {
+    "name": "ESQUELETO CERV 1890",
+    "category": 4,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 16,
+  "fields": {
+    "name": "Huevo de Chocolate Kinder con Sorpresa Caja x 20 Gr",
+    "category": 5,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 17,
+  "fields": {
+    "name": "Desmaquillador de Ojos Bifasico en Botella Nivea x 125 Ml",
+    "category": 6,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 37
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 18,
+  "fields": {
+    "name": "Crema Facial Cuidado Nivea x 100 Ml",
+    "category": 6,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 19,
+  "fields": {
+    "name": "Desodorante Antitranspirante en Barra V8 Rexona x 50 Gr",
+    "category": 7,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 20,
+  "fields": {
+    "name": "Desodorante Stick Nutritivo Rexona x 50 Gr",
+    "category": 7,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 54
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 21,
+  "fields": {
+    "name": "Desodorante Original Dove x 50 Gr",
+    "category": 8,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 49
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 22,
+  "fields": {
+    "name": "Cerveza Corona x 335 Cc",
+    "category": 9,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 15
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 23,
+  "fields": {
+    "name": "Repelente Crema Off x 60 Gr",
+    "category": 10,
+    "price": "2.00",
+    "pvp": "2.24",
+    "image": "",
+    "stock": 16
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 24,
+  "fields": {
+    "name": "Galletitas BanÌƒadas con Chocolate con Relleno de Limon Terrabusi Tita x 18 Gr",
+    "category": 11,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 17
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 25,
+  "fields": {
+    "name": "Obleas Rellena Bagley Opera x 55 Gr",
+    "category": 12,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 26,
+  "fields": {
+    "name": "Obleas Rellena Bagley Opera x 92 Gr",
+    "category": 12,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 27,
+  "fields": {
+    "name": "Alfajor Mousse Triple Milka x 55 Gr",
+    "category": 13,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 34
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 28,
+  "fields": {
+    "name": "Alfajor Triple Dulce de Leche Terrabusi x 70 Gr",
+    "category": 14,
+    "price": "9.00",
+    "pvp": "10.08",
+    "image": "",
+    "stock": 29
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 29,
+  "fields": {
+    "name": "Whisky Criadores En Petaca x 195 Cc",
+    "category": 15,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 30,
+  "fields": {
+    "name": "Caramelos Halls Cherry Paquete x 28 Gr",
+    "category": 16,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 31,
+  "fields": {
+    "name": "Licor Crema de Dulce de Leche Tres Plumas x 200 Cc",
+    "category": 17,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 68
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 32,
+  "fields": {
+    "name": "Chocolate en Tableta Shot x 35 Gr",
+    "category": 18,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 33,
+  "fields": {
+    "name": "Chicles Topline Fruta Paquete x 6.7 Gr",
+    "category": 19,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 34,
+  "fields": {
+    "name": "Bombon de Leche Suelto Bon o Bon x 1 Un",
+    "category": 20,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 5
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 35,
+  "fields": {
+    "name": "Chocolate Leche M Joy Milka x 30 Gr",
+    "category": 13,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 36,
+  "fields": {
+    "name": "Chocolate con Mani Block Cofler x 110 Gr",
+    "category": 21,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 4
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 37,
+  "fields": {
+    "name": "Caramelos Mentho Plus Cherry 9 x Gr",
+    "category": 22,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 8
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 38,
+  "fields": {
+    "name": "Caramelos Miel Menthoplus x 30.6 Gr",
+    "category": 23,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 39,
+  "fields": {
+    "name": "Desodorante Roll On Crystal Rexona x 50 Ml",
+    "category": 7,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 40,
+  "fields": {
+    "name": "PanÌƒuelos Descartables Carrefour x 1 Un",
+    "category": 24,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 27
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 41,
+  "fields": {
+    "name": "Bocadito de Dulce de Leche Light Vauquita x 22 Gr",
+    "category": 25,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 21
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 42,
+  "fields": {
+    "name": "Desodorante Nutritive Roll On Rexona x 50 Ml",
+    "category": 7,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 10
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 43,
+  "fields": {
+    "name": "Chicles Topline Seven Menta Paquete x 14 Gr",
+    "category": 19,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 23
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 44,
+  "fields": {
+    "name": "Caramelos Strong Mint Paquete Halls x 28 Gr",
+    "category": 16,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 45,
+  "fields": {
+    "name": "Caramelos Mentol Paquete Halls x 28 Gr",
+    "category": 16,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 46,
+  "fields": {
+    "name": "Alfajor con BanÌƒo de Chocolate Cachafaz x 60 Gr",
+    "category": 26,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 47,
+  "fields": {
+    "name": "Alfajor Clasico Terrabusi x 50 Gr",
+    "category": 14,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 48,
+  "fields": {
+    "name": "Chicle Seven Strong Top Line 14,7 x Gr",
+    "category": 27,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 49,
+  "fields": {
+    "name": "Desodorante Roll On Invisible Plusbelle x 50 Cc",
+    "category": 28,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 50,
+  "fields": {
+    "name": "Turron Arcor x 25 Gr",
+    "category": 29,
+    "price": "2.00",
+    "pvp": "2.24",
+    "image": "",
+    "stock": 48
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 51,
+  "fields": {
+    "name": "Gelatina Sabor Frutilla Shimy Sancor x 110 Gr",
+    "category": 30,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 52,
+  "fields": {
+    "name": "Gelatina Sabor Manzana Shimy Sancor x 110 Gr",
+    "category": 30,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 53,
+  "fields": {
+    "name": "Desodorante en Crema en Pote Odorono Rexona x 60 Gr",
+    "category": 7,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 21
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 54,
+  "fields": {
+    "name": "Desodorante Original Dove x 85 Ml",
+    "category": 8,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 2
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 55,
+  "fields": {
+    "name": "Desodorante Anititranspirante Roll On Sensitive Rexona x 85 Ml",
+    "category": 7,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 24
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 56,
+  "fields": {
+    "name": "Desodorante Antitranspirante Roll On Invisible Rexona x 50 Gr",
+    "category": 7,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 57,
+  "fields": {
+    "name": "Desodorante Antitranspirante Roll On V8 Rexona x 50 Ml",
+    "category": 7,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 58,
+  "fields": {
+    "name": "Desodorante Cotton Rexona x 85 Ml",
+    "category": 7,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 4
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 59,
+  "fields": {
+    "name": "Antitranspirante Comprimido Active Emotion Rexona x 85 Ml",
+    "category": 7,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 60,
+  "fields": {
+    "name": "Chicles Menta Blister Beldent x 10 Gr",
+    "category": 31,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 61,
+  "fields": {
+    "name": "Chicles Menta Blister Beldent x 10 Gr",
+    "category": 31,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 10
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 62,
+  "fields": {
+    "name": "Chicles Globo Blister Beldent x 10 Gr",
+    "category": 31,
+    "price": "2.00",
+    "pvp": "2.24",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 63,
+  "fields": {
+    "name": "Mentho-Plus Free Crerry Arcor x 27 Gr",
+    "category": 32,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 3
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 64,
+  "fields": {
+    "name": "Caramelos Sabor Mentol Zero Menthoplus x 27,3",
+    "category": 32,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 5
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 65,
+  "fields": {
+    "name": "Chicles Seven Frutilla Paquete Top Line x 14.7 Gr",
+    "category": 27,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 66,
+  "fields": {
+    "name": "Postre Sabor Dulce de Leche Danette Pack 2 Un x 190 Gr",
+    "category": 33,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 67,
+  "fields": {
+    "name": "Postre Sabor Chocolate Danette Pack 2 Un x 190 Gr",
+    "category": 33,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 68,
+  "fields": {
+    "name": "Chocolate con Mani Block Cofler x 38 Gr",
+    "category": 21,
+    "price": "4.00",
+    "pvp": "4.48",
+    "image": "",
+    "stock": 3
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 69,
+  "fields": {
+    "name": "Sal Fina en Salero Celusal x 250 Gr",
+    "category": 34,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 70,
+  "fields": {
+    "name": "Pomada para zapatos Negro Lata Wassington x 60 Gr",
+    "category": 35,
+    "price": "9.00",
+    "pvp": "10.08",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 71,
+  "fields": {
+    "name": "Pomada para zapatos Marron en Lata Wassington x 60 Gr",
+    "category": 35,
+    "price": "8.00",
+    "pvp": "8.96",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 72,
+  "fields": {
+    "name": "Pomada para zapatos en lata Wassington x 60 Cc",
+    "category": 35,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 73,
+  "fields": {
+    "name": "Flan Sabor Vainilla con Caramelo Sancorito x 110 Gr",
+    "category": 36,
+    "price": "1.00",
+    "pvp": "1.12",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 74,
+  "fields": {
+    "name": "Semillas de Girasol Pipas x 18 Gr",
+    "category": 37,
+    "price": "9.00",
+    "pvp": "10.08",
+    "image": "",
+    "stock": 11
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 75,
+  "fields": {
+    "name": "QUITAESMALTE FORTALECEDOR UNIQUIT X 120 CC",
+    "category": 38,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 76,
+  "fields": {
+    "name": "Tableta de Chocolate sin Azucar Libre de Gluten Mapsa X 100 Gr",
+    "category": 39,
+    "price": "6.00",
+    "pvp": "6.72",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 77,
+  "fields": {
+    "name": "Tableta de Chocolate con Mani Biznikke x 30 Gr",
+    "category": 40,
+    "price": "10.00",
+    "pvp": "11.20",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 78,
+  "fields": {
+    "name": "Tableta de Dulce de Leche Vauquita Tableta x 25 Gr",
+    "category": 25,
+    "price": "3.00",
+    "pvp": "3.36",
+    "image": "",
+    "stock": 29
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 79,
+  "fields": {
+    "name": "Alfajor con BanÌƒo de Chocolate Blanco Guaymallen x 38 Gr",
+    "category": 41,
+    "price": "5.00",
+    "pvp": "5.60",
+    "image": "",
+    "stock": 0
+  }
+},
+{
+  "model": "pos.product",
+  "pk": 80,
+  "fields": {
+    "name": "Alfajor con BanÌƒo de Chocolate Guaymallen x 38 Gr",
+    "category": 41,
+    "price": "7.00",
+    "pvp": "7.84",
+    "image": "",
+    "stock": 3
+  }
+},
+{
+  "model": "pos.purchase",
+  "pk": 1,
+  "fields": {
+    "provider": 1,
+    "payment_condition": "contado",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "2957.92"
+  }
+},
+{
+  "model": "pos.purchase",
+  "pk": 2,
+  "fields": {
+    "provider": 1,
+    "payment_condition": "contado",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "2535.68"
+  }
+},
+{
+  "model": "pos.purchase",
+  "pk": 3,
+  "fields": {
+    "provider": 1,
+    "payment_condition": "contado",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "2742.88"
+  }
+},
+{
+  "model": "pos.purchase",
+  "pk": 4,
+  "fields": {
+    "provider": 1,
+    "payment_condition": "contado",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "3351.04"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 1,
+  "fields": {
+    "purchase": 1,
+    "product": 21,
+    "cant": 26,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "116.48"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 2,
+  "fields": {
+    "purchase": 1,
+    "product": 2,
+    "cant": 23,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "25.76"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 3,
+  "fields": {
+    "purchase": 1,
+    "product": 27,
+    "cant": 34,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "266.56"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 4,
+  "fields": {
+    "purchase": 1,
+    "product": 14,
+    "cant": 42,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "376.32"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 5,
+  "fields": {
+    "purchase": 1,
+    "product": 7,
+    "cant": 40,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "179.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 6,
+  "fields": {
+    "purchase": 1,
+    "product": 74,
+    "cant": 11,
+    "price": "10.08",
+    "dscto": "0.00",
+    "subtotal": "110.88"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 7,
+  "fields": {
+    "purchase": 1,
+    "product": 5,
+    "cant": 41,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "45.92"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 8,
+  "fields": {
+    "purchase": 1,
+    "product": 78,
+    "cant": 40,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 9,
+  "fields": {
+    "purchase": 1,
+    "product": 64,
+    "cant": 34,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "152.32"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 10,
+  "fields": {
+    "purchase": 1,
+    "product": 20,
+    "cant": 8,
+    "price": "5.60",
+    "dscto": "0.00",
+    "subtotal": "44.80"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 11,
+  "fields": {
+    "purchase": 1,
+    "product": 50,
+    "cant": 5,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "11.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 12,
+  "fields": {
+    "purchase": 1,
+    "product": 17,
+    "cant": 37,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "248.64"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 13,
+  "fields": {
+    "purchase": 1,
+    "product": 53,
+    "cant": 20,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "89.60"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 14,
+  "fields": {
+    "purchase": 1,
+    "product": 24,
+    "cant": 17,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "76.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 15,
+  "fields": {
+    "purchase": 1,
+    "product": 37,
+    "cant": 5,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "56.00"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 16,
+  "fields": {
+    "purchase": 1,
+    "product": 42,
+    "cant": 38,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "297.92"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 17,
+  "fields": {
+    "purchase": 1,
+    "product": 3,
+    "cant": 45,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "403.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 18,
+  "fields": {
+    "purchase": 1,
+    "product": 43,
+    "cant": 30,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 19,
+  "fields": {
+    "purchase": 1,
+    "product": 13,
+    "cant": 28,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "188.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 20,
+  "fields": {
+    "purchase": 2,
+    "product": 47,
+    "cant": 1,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "3.36"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 21,
+  "fields": {
+    "purchase": 2,
+    "product": 57,
+    "cant": 43,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "192.64"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 22,
+  "fields": {
+    "purchase": 2,
+    "product": 50,
+    "cant": 10,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "22.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 23,
+  "fields": {
+    "purchase": 2,
+    "product": 58,
+    "cant": 41,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "275.52"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 24,
+  "fields": {
+    "purchase": 2,
+    "product": 69,
+    "cant": 43,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "48.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 25,
+  "fields": {
+    "purchase": 2,
+    "product": 44,
+    "cant": 12,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 26,
+  "fields": {
+    "purchase": 2,
+    "product": 71,
+    "cant": 19,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "170.24"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 27,
+  "fields": {
+    "purchase": 2,
+    "product": 31,
+    "cant": 12,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 28,
+  "fields": {
+    "purchase": 2,
+    "product": 53,
+    "cant": 32,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "143.36"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 29,
+  "fields": {
+    "purchase": 2,
+    "product": 2,
+    "cant": 23,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "25.76"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 30,
+  "fields": {
+    "purchase": 2,
+    "product": 54,
+    "cant": 24,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "188.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 31,
+  "fields": {
+    "purchase": 2,
+    "product": 21,
+    "cant": 6,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "26.88"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 32,
+  "fields": {
+    "purchase": 2,
+    "product": 55,
+    "cant": 19,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "63.84"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 33,
+  "fields": {
+    "purchase": 2,
+    "product": 23,
+    "cant": 34,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "76.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 34,
+  "fields": {
+    "purchase": 2,
+    "product": 36,
+    "cant": 24,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "107.52"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 35,
+  "fields": {
+    "purchase": 2,
+    "product": 80,
+    "cant": 8,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "62.72"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 36,
+  "fields": {
+    "purchase": 2,
+    "product": 68,
+    "cant": 23,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "103.04"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 37,
+  "fields": {
+    "purchase": 2,
+    "product": 14,
+    "cant": 46,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "412.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 38,
+  "fields": {
+    "purchase": 2,
+    "product": 61,
+    "cant": 44,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "344.96"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 39,
+  "fields": {
+    "purchase": 3,
+    "product": 20,
+    "cant": 46,
+    "price": "5.60",
+    "dscto": "0.00",
+    "subtotal": "257.60"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 40,
+  "fields": {
+    "purchase": 3,
+    "product": 8,
+    "cant": 40,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "358.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 41,
+  "fields": {
+    "purchase": 3,
+    "product": 34,
+    "cant": 12,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "94.08"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 42,
+  "fields": {
+    "purchase": 3,
+    "product": 78,
+    "cant": 3,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "10.08"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 43,
+  "fields": {
+    "purchase": 3,
+    "product": 6,
+    "cant": 22,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "49.28"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 44,
+  "fields": {
+    "purchase": 3,
+    "product": 43,
+    "cant": 4,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "17.92"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 45,
+  "fields": {
+    "purchase": 3,
+    "product": 31,
+    "cant": 28,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "313.60"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 46,
+  "fields": {
+    "purchase": 3,
+    "product": 41,
+    "cant": 39,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "262.08"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 47,
+  "fields": {
+    "purchase": 3,
+    "product": 69,
+    "cant": 34,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "38.08"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 48,
+  "fields": {
+    "purchase": 3,
+    "product": 3,
+    "cant": 22,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "197.12"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 49,
+  "fields": {
+    "purchase": 3,
+    "product": 67,
+    "cant": 44,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "295.68"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 50,
+  "fields": {
+    "purchase": 3,
+    "product": 55,
+    "cant": 2,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "6.72"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 51,
+  "fields": {
+    "purchase": 3,
+    "product": 53,
+    "cant": 30,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 52,
+  "fields": {
+    "purchase": 3,
+    "product": 64,
+    "cant": 14,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "62.72"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 53,
+  "fields": {
+    "purchase": 3,
+    "product": 40,
+    "cant": 46,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "412.16"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 54,
+  "fields": {
+    "purchase": 3,
+    "product": 5,
+    "cant": 1,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "1.12"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 55,
+  "fields": {
+    "purchase": 3,
+    "product": 13,
+    "cant": 22,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "147.84"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 56,
+  "fields": {
+    "purchase": 3,
+    "product": 10,
+    "cant": 4,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "44.80"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 57,
+  "fields": {
+    "purchase": 3,
+    "product": 79,
+    "cant": 7,
+    "price": "5.60",
+    "dscto": "0.00",
+    "subtotal": "39.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 58,
+  "fields": {
+    "purchase": 4,
+    "product": 66,
+    "cant": 23,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "25.76"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 59,
+  "fields": {
+    "purchase": 4,
+    "product": 31,
+    "cant": 40,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "448.00"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 60,
+  "fields": {
+    "purchase": 4,
+    "product": 52,
+    "cant": 29,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "324.80"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 61,
+  "fields": {
+    "purchase": 4,
+    "product": 36,
+    "cant": 31,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "138.88"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 62,
+  "fields": {
+    "purchase": 4,
+    "product": 76,
+    "cant": 1,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "6.72"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 63,
+  "fields": {
+    "purchase": 4,
+    "product": 28,
+    "cant": 46,
+    "price": "10.08",
+    "dscto": "0.00",
+    "subtotal": "463.68"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 64,
+  "fields": {
+    "purchase": 4,
+    "product": 63,
+    "cant": 17,
+    "price": "1.12",
+    "dscto": "0.00",
+    "subtotal": "19.04"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 65,
+  "fields": {
+    "purchase": 4,
+    "product": 44,
+    "cant": 12,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "134.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 66,
+  "fields": {
+    "purchase": 4,
+    "product": 22,
+    "cant": 46,
+    "price": "7.84",
+    "dscto": "0.00",
+    "subtotal": "360.64"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 67,
+  "fields": {
+    "purchase": 4,
+    "product": 55,
+    "cant": 30,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "100.80"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 68,
+  "fields": {
+    "purchase": 4,
+    "product": 37,
+    "cant": 16,
+    "price": "11.20",
+    "dscto": "0.00",
+    "subtotal": "179.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 69,
+  "fields": {
+    "purchase": 4,
+    "product": 50,
+    "cant": 50,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "112.00"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 70,
+  "fields": {
+    "purchase": 4,
+    "product": 64,
+    "cant": 13,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "58.24"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 71,
+  "fields": {
+    "purchase": 4,
+    "product": 21,
+    "cant": 44,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "197.12"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 72,
+  "fields": {
+    "purchase": 4,
+    "product": 7,
+    "cant": 25,
+    "price": "4.48",
+    "dscto": "0.00",
+    "subtotal": "112.00"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 73,
+  "fields": {
+    "purchase": 4,
+    "product": 3,
+    "cant": 49,
+    "price": "8.96",
+    "dscto": "0.00",
+    "subtotal": "439.04"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 74,
+  "fields": {
+    "purchase": 4,
+    "product": 6,
+    "cant": 10,
+    "price": "2.24",
+    "dscto": "0.00",
+    "subtotal": "22.40"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 75,
+  "fields": {
+    "purchase": 4,
+    "product": 48,
+    "cant": 20,
+    "price": "3.36",
+    "dscto": "0.00",
+    "subtotal": "67.20"
+  }
+},
+{
+  "model": "pos.purchasedetail",
+  "pk": 76,
+  "fields": {
+    "purchase": 4,
+    "product": 13,
+    "cant": 21,
+    "price": "6.72",
+    "dscto": "0.00",
+    "subtotal": "141.12"
+  }
+},
+{
+  "model": "pos.client",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "mobile": "0979014553",
+    "birthdate": "2021-08-30",
+    "address": "Milagro, cdla. Dager avda tumbez y zamora"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "621.60",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "74.59",
+    "total": "696.19",
+    "cash": "696.19",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 2,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "348.32",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "41.80",
+    "total": "390.12",
+    "cash": "390.12",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 3,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "667.52",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "80.10",
+    "total": "747.62",
+    "cash": "747.62",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 4,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "636.16",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "76.34",
+    "total": "712.50",
+    "cash": "712.50",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 5,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "396.48",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "47.58",
+    "total": "444.06",
+    "cash": "444.06",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 6,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "1329.44",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "159.53",
+    "total": "1488.97",
+    "cash": "1488.97",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 7,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "528.64",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "63.44",
+    "total": "592.08",
+    "cash": "592.08",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 8,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "568.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "68.28",
+    "total": "637.24",
+    "cash": "637.24",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 9,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "350.56",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "42.07",
+    "total": "392.63",
+    "cash": "392.63",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.sale",
+  "pk": 10,
+  "fields": {
+    "client": 1,
+    "employee": null,
+    "payment_condition": "contado",
+    "payment_method": "efectivo",
+    "type_voucher": "ticket",
+    "date_joined": "2021-08-30",
+    "end_credit": "2021-08-30",
+    "subtotal": "809.76",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "iva": "0.12",
+    "total_iva": "97.17",
+    "total": "906.93",
+    "cash": "906.93",
+    "change": "0.00",
+    "card_number": null,
+    "titular": null,
+    "amount_debited": "0.00"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 1,
+  "fields": {
+    "sale": 1,
+    "product": 55,
+    "cant": 27,
+    "price": "3.36",
+    "subtotal": "90.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "90.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 2,
+  "fields": {
+    "sale": 1,
+    "product": 57,
+    "cant": 35,
+    "price": "4.48",
+    "subtotal": "156.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "156.80"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 3,
+  "fields": {
+    "sale": 1,
+    "product": 6,
+    "cant": 30,
+    "price": "2.24",
+    "subtotal": "67.20",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "67.20"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 4,
+  "fields": {
+    "sale": 1,
+    "product": 42,
+    "cant": 25,
+    "price": "7.84",
+    "subtotal": "196.00",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "196.00"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 5,
+  "fields": {
+    "sale": 1,
+    "product": 34,
+    "cant": 2,
+    "price": "7.84",
+    "subtotal": "15.68",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "15.68"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 6,
+  "fields": {
+    "sale": 1,
+    "product": 14,
+    "cant": 7,
+    "price": "8.96",
+    "subtotal": "62.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "62.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 7,
+  "fields": {
+    "sale": 1,
+    "product": 5,
+    "cant": 29,
+    "price": "1.12",
+    "subtotal": "32.48",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "32.48"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 8,
+  "fields": {
+    "sale": 2,
+    "product": 34,
+    "cant": 1,
+    "price": "7.84",
+    "subtotal": "7.84",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "7.84"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 9,
+  "fields": {
+    "sale": 2,
+    "product": 71,
+    "cant": 11,
+    "price": "8.96",
+    "subtotal": "98.56",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "98.56"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 10,
+  "fields": {
+    "sale": 2,
+    "product": 37,
+    "cant": 9,
+    "price": "11.20",
+    "subtotal": "100.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "100.80"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 11,
+  "fields": {
+    "sale": 2,
+    "product": 31,
+    "cant": 5,
+    "price": "11.20",
+    "subtotal": "56.00",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "56.00"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 12,
+  "fields": {
+    "sale": 2,
+    "product": 80,
+    "cant": 5,
+    "price": "7.84",
+    "subtotal": "39.20",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "39.20"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 13,
+  "fields": {
+    "sale": 2,
+    "product": 76,
+    "cant": 1,
+    "price": "6.72",
+    "subtotal": "6.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "6.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 14,
+  "fields": {
+    "sale": 2,
+    "product": 79,
+    "cant": 7,
+    "price": "5.60",
+    "subtotal": "39.20",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "39.20"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 15,
+  "fields": {
+    "sale": 3,
+    "product": 10,
+    "cant": 3,
+    "price": "11.20",
+    "subtotal": "33.60",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "33.60"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 16,
+  "fields": {
+    "sale": 3,
+    "product": 40,
+    "cant": 2,
+    "price": "8.96",
+    "subtotal": "17.92",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "17.92"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 17,
+  "fields": {
+    "sale": 3,
+    "product": 67,
+    "cant": 43,
+    "price": "6.72",
+    "subtotal": "288.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "288.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 18,
+  "fields": {
+    "sale": 3,
+    "product": 52,
+    "cant": 28,
+    "price": "11.20",
+    "subtotal": "313.60",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "313.60"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 19,
+  "fields": {
+    "sale": 3,
+    "product": 5,
+    "cant": 1,
+    "price": "1.12",
+    "subtotal": "1.12",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "1.12"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 20,
+  "fields": {
+    "sale": 3,
+    "product": 6,
+    "cant": 2,
+    "price": "2.24",
+    "subtotal": "4.48",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "4.48"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 21,
+  "fields": {
+    "sale": 3,
+    "product": 34,
+    "cant": 1,
+    "price": "7.84",
+    "subtotal": "7.84",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "7.84"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 22,
+  "fields": {
+    "sale": 4,
+    "product": 64,
+    "cant": 56,
+    "price": "4.48",
+    "subtotal": "250.88",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "250.88"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 23,
+  "fields": {
+    "sale": 4,
+    "product": 58,
+    "cant": 29,
+    "price": "6.72",
+    "subtotal": "194.88",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "194.88"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 24,
+  "fields": {
+    "sale": 4,
+    "product": 67,
+    "cant": 1,
+    "price": "6.72",
+    "subtotal": "6.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "6.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 25,
+  "fields": {
+    "sale": 4,
+    "product": 57,
+    "cant": 4,
+    "price": "4.48",
+    "subtotal": "17.92",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "17.92"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 26,
+  "fields": {
+    "sale": 4,
+    "product": 48,
+    "cant": 18,
+    "price": "3.36",
+    "subtotal": "60.48",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "60.48"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 27,
+  "fields": {
+    "sale": 4,
+    "product": 42,
+    "cant": 2,
+    "price": "7.84",
+    "subtotal": "15.68",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "15.68"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 28,
+  "fields": {
+    "sale": 4,
+    "product": 68,
+    "cant": 20,
+    "price": "4.48",
+    "subtotal": "89.60",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "89.60"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 29,
+  "fields": {
+    "sale": 5,
+    "product": 36,
+    "cant": 49,
+    "price": "4.48",
+    "subtotal": "219.52",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "219.52"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 30,
+  "fields": {
+    "sale": 5,
+    "product": 47,
+    "cant": 1,
+    "price": "3.36",
+    "subtotal": "3.36",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "3.36"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 31,
+  "fields": {
+    "sale": 5,
+    "product": 43,
+    "cant": 1,
+    "price": "4.48",
+    "subtotal": "4.48",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "4.48"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 32,
+  "fields": {
+    "sale": 5,
+    "product": 42,
+    "cant": 1,
+    "price": "7.84",
+    "subtotal": "7.84",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "7.84"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 33,
+  "fields": {
+    "sale": 5,
+    "product": 54,
+    "cant": 10,
+    "price": "7.84",
+    "subtotal": "78.40",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "78.40"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 34,
+  "fields": {
+    "sale": 5,
+    "product": 37,
+    "cant": 4,
+    "price": "11.20",
+    "subtotal": "44.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "44.80"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 35,
+  "fields": {
+    "sale": 5,
+    "product": 50,
+    "cant": 17,
+    "price": "2.24",
+    "subtotal": "38.08",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "38.08"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 36,
+  "fields": {
+    "sale": 6,
+    "product": 40,
+    "cant": 6,
+    "price": "8.96",
+    "subtotal": "53.76",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "53.76"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 37,
+  "fields": {
+    "sale": 6,
+    "product": 69,
+    "cant": 51,
+    "price": "1.12",
+    "subtotal": "57.12",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "57.12"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 38,
+  "fields": {
+    "sale": 6,
+    "product": 48,
+    "cant": 2,
+    "price": "3.36",
+    "subtotal": "6.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "6.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 39,
+  "fields": {
+    "sale": 6,
+    "product": 14,
+    "cant": 57,
+    "price": "8.96",
+    "subtotal": "510.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "510.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 40,
+  "fields": {
+    "sale": 6,
+    "product": 44,
+    "cant": 24,
+    "price": "11.20",
+    "subtotal": "268.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "268.80"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 41,
+  "fields": {
+    "sale": 6,
+    "product": 78,
+    "cant": 14,
+    "price": "3.36",
+    "subtotal": "47.04",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "47.04"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 42,
+  "fields": {
+    "sale": 6,
+    "product": 3,
+    "cant": 43,
+    "price": "8.96",
+    "subtotal": "385.28",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "385.28"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 43,
+  "fields": {
+    "sale": 7,
+    "product": 53,
+    "cant": 61,
+    "price": "4.48",
+    "subtotal": "273.28",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "273.28"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 44,
+  "fields": {
+    "sale": 7,
+    "product": 21,
+    "cant": 27,
+    "price": "4.48",
+    "subtotal": "120.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "120.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 45,
+  "fields": {
+    "sale": 7,
+    "product": 10,
+    "cant": 1,
+    "price": "11.20",
+    "subtotal": "11.20",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "11.20"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 46,
+  "fields": {
+    "sale": 7,
+    "product": 58,
+    "cant": 8,
+    "price": "6.72",
+    "subtotal": "53.76",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "53.76"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 47,
+  "fields": {
+    "sale": 7,
+    "product": 40,
+    "cant": 4,
+    "price": "8.96",
+    "subtotal": "35.84",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "35.84"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 48,
+  "fields": {
+    "sale": 7,
+    "product": 52,
+    "cant": 1,
+    "price": "11.20",
+    "subtotal": "11.20",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "11.20"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 49,
+  "fields": {
+    "sale": 7,
+    "product": 23,
+    "cant": 10,
+    "price": "2.24",
+    "subtotal": "22.40",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "22.40"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 50,
+  "fields": {
+    "sale": 8,
+    "product": 71,
+    "cant": 8,
+    "price": "8.96",
+    "subtotal": "71.68",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "71.68"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 51,
+  "fields": {
+    "sale": 8,
+    "product": 22,
+    "cant": 3,
+    "price": "7.84",
+    "subtotal": "23.52",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "23.52"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 52,
+  "fields": {
+    "sale": 8,
+    "product": 34,
+    "cant": 3,
+    "price": "7.84",
+    "subtotal": "23.52",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "23.52"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 53,
+  "fields": {
+    "sale": 8,
+    "product": 43,
+    "cant": 10,
+    "price": "4.48",
+    "subtotal": "44.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "44.80"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 54,
+  "fields": {
+    "sale": 8,
+    "product": 61,
+    "cant": 34,
+    "price": "7.84",
+    "subtotal": "266.56",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "266.56"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 55,
+  "fields": {
+    "sale": 8,
+    "product": 28,
+    "cant": 12,
+    "price": "10.08",
+    "subtotal": "120.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "120.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 56,
+  "fields": {
+    "sale": 8,
+    "product": 57,
+    "cant": 4,
+    "price": "4.48",
+    "subtotal": "17.92",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "17.92"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 57,
+  "fields": {
+    "sale": 9,
+    "product": 28,
+    "cant": 5,
+    "price": "10.08",
+    "subtotal": "50.40",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "50.40"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 58,
+  "fields": {
+    "sale": 9,
+    "product": 66,
+    "cant": 23,
+    "price": "1.12",
+    "subtotal": "25.76",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "25.76"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 59,
+  "fields": {
+    "sale": 9,
+    "product": 36,
+    "cant": 2,
+    "price": "4.48",
+    "subtotal": "8.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "8.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 60,
+  "fields": {
+    "sale": 9,
+    "product": 23,
+    "cant": 4,
+    "price": "2.24",
+    "subtotal": "8.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "8.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 61,
+  "fields": {
+    "sale": 9,
+    "product": 22,
+    "cant": 17,
+    "price": "7.84",
+    "subtotal": "133.28",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "133.28"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 62,
+  "fields": {
+    "sale": 9,
+    "product": 54,
+    "cant": 12,
+    "price": "7.84",
+    "subtotal": "94.08",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "94.08"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 63,
+  "fields": {
+    "sale": 9,
+    "product": 69,
+    "cant": 26,
+    "price": "1.12",
+    "subtotal": "29.12",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "29.12"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 64,
+  "fields": {
+    "sale": 10,
+    "product": 40,
+    "cant": 7,
+    "price": "8.96",
+    "subtotal": "62.72",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "62.72"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 65,
+  "fields": {
+    "sale": 10,
+    "product": 22,
+    "cant": 11,
+    "price": "7.84",
+    "subtotal": "86.24",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "86.24"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 66,
+  "fields": {
+    "sale": 10,
+    "product": 23,
+    "cant": 4,
+    "price": "2.24",
+    "subtotal": "8.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "8.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 67,
+  "fields": {
+    "sale": 10,
+    "product": 31,
+    "cant": 7,
+    "price": "11.20",
+    "subtotal": "78.40",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "78.40"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 68,
+  "fields": {
+    "sale": 10,
+    "product": 63,
+    "cant": 14,
+    "price": "1.12",
+    "subtotal": "15.68",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "15.68"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 69,
+  "fields": {
+    "sale": 10,
+    "product": 41,
+    "cant": 18,
+    "price": "6.72",
+    "subtotal": "120.96",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "120.96"
+  }
+},
+{
+  "model": "pos.saledetail",
+  "pk": 70,
+  "fields": {
+    "sale": 10,
+    "product": 13,
+    "cant": 65,
+    "price": "6.72",
+    "subtotal": "436.80",
+    "dscto": "0.00",
+    "total_dscto": "0.00",
+    "total": "436.80"
+  }
+}
+]

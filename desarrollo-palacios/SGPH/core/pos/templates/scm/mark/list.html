@@ -1,0 +1,16 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'scm/mark/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Marca</th>
+    <th>Descripción</th>
+    <th class="text-center">Opciones</th>
+{% endblock %}
+
+ 
+{% block javascript_list %}
+
+{% endblock %}
