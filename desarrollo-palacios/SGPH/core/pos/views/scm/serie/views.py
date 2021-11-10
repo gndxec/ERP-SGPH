@@ -8,9 +8,6 @@ from django.views.generic import CreateView, DeleteView, FormView, UpdateView
 from core.reports.forms import ReportForm
 from core.security.mixins import PermissionMixin
 
-
-
-
 from django.contrib.auth.models import Group
 from django.db.models import Q
 from django.template.loader import get_template
@@ -32,9 +29,9 @@ class PurchaseSerieListView(PermissionMixin, FormView):
                 data = []
                 start_date = request.POST['start_date']
                 end_date = request.POST['end_date']
-                search = PurchaseRequest.objects.filter(Q(state='Aprobado')|Q(state='Recibido'))
+                search = PurchaseRequest.objects.filter(Q(state='Aprobado') | Q(state='Recibido'))
 
-                #search = PurchaseRequest.objects.filter()
+                # search = PurchaseRequest.objects.filter()
                 if len(start_date) and len(end_date):
                     search = search.filter(date_joined__range=[start_date, end_date])
                 for i in search:
@@ -93,27 +90,27 @@ class PurchaseSerieCreateView(PermissionMixin, CreateView):
                 with transaction.atomic():
                     purchaseorder = PurchaseRequest()
                     purchaseorder.provider_id = int(request.POST['provider'])
-                    print('provider_id',purchaseorder.provider_id)
+                    print('provider_id', purchaseorder.provider_id)
                     purchaseorder.payment_condition = request.POST['payment_condition']
-                    print('payment_condition',purchaseorder.payment_condition)
+                    print('payment_condition', purchaseorder.payment_condition)
                     purchaseorder.date_joined = request.POST['date_joined']
-                    print('date_joined',purchaseorder.date_joined)                  
+                    print('date_joined', purchaseorder.date_joined)
                     purchaseorder.state = "Aprobar"
-                    print('state',purchaseorder.state )
+                    print('state', purchaseorder.state)
                     purchaseorder.concepto = request.POST['concepto']
-                    print('concepto',purchaseorder.concepto)
+                    print('concepto', purchaseorder.concepto)
                     purchaseorder.plazo_id = request.POST['plazo']
-                    print('plazo_id',purchaseorder.plazo_id)
+                    print('plazo_id', purchaseorder.plazo_id)
                     purchaseorder.sucursal_id = request.POST['sucursal']
-                    print('sucursal_id',purchaseorder.sucursal_id)
+                    print('sucursal_id', purchaseorder.sucursal_id)
                     purchaseorder.dscto = float(request.POST['dscto'])
-                    print('dscto',purchaseorder.dscto)
+                    print('dscto', purchaseorder.dscto)
                     purchaseorder.iva = float(Company.objects.first().iva) / 100
-                    print( 'iva',purchaseorder.iva)
+                    print('iva', purchaseorder.iva)
                     purchaseorder.total = float(request.POST['total'])
-                    print( 'total',purchaseorder.total)
+                    print('total', purchaseorder.total)
                     purchaseorder.subtotal = float(request.POST['subtotal'])
-                    print( 'subtotal',purchaseorder.subtotal)
+                    print('subtotal', purchaseorder.subtotal)
 
                     purchaseorder.save()
 
@@ -130,7 +127,7 @@ class PurchaseSerieCreateView(PermissionMixin, CreateView):
                         det.price = float(p['pricemod'])
                         print(det.price)
                         det.subtotal = det.cant * float(det.price)
-                        print(det.subtotal )
+                        print(det.subtotal)
                         det.save()
 
                         det.product.stock += det.cant
@@ -141,13 +138,13 @@ class PurchaseSerieCreateView(PermissionMixin, CreateView):
                     if purchaseorder.payment_condition == 'credito':
                         purchaseorder.end_credit = request.POST['end_credit']
                         purchaseorder.save()
-                        #debtspay = DebtsPay()
-                        #debtspay.purchaseorder_id = purchaseorder.id
-                        #debtspay.date_joinedorder = purchaseorder.date_joined
-                        #debtspay.end_date = purchaseorder.end_credit
-                        #debtspay.debt = purchaseorder.subtotal
-                        #debtspay.saldo = purchaseorder.subtotal
-                        #debtspay.save()
+                        # debtspay = DebtsPay()
+                        # debtspay.purchaseorder_id = purchaseorder.id
+                        # debtspay.date_joinedorder = purchaseorder.date_joined
+                        # debtspay.end_date = purchaseorder.end_credit
+                        # debtspay.debt = purchaseorder.subtotal
+                        # debtspay.saldo = purchaseorder.subtotal
+                        # debtspay.save()
             elif action == 'search_products':
                 data = []
                 ids = json.loads(request.POST['ids'])
@@ -171,19 +168,19 @@ class PurchaseSerieCreateView(PermissionMixin, CreateView):
             elif action == 'create_provider':
                 form = ProviderForm(request.POST)
                 data = form.save()
-            #agrseries
+            # agrseries
             elif action == 'create_series':
                 with transaction.atomic():
-                    #form = SeriesCompraForm(request.POST)
+                    # form = SeriesCompraForm(request.POST)
 
-                    #series=SeriesCompraForm()
-                    #series.numfactpro=request.POST['numfactpro']
-                    #print(series.numfactpro)
-                    #series.demanda=request.POST['demanda']
-                    #print(series.demanda)
-                    #series.recibido=request.POST['recibido']
-                    #print(series.recibido)
-                     
+                    # series=SeriesCompraForm()
+                    # series.numfactpro=request.POST['numfactpro']
+                    # print(series.numfactpro)
+                    # series.demanda=request.POST['demanda']
+                    # print(series.demanda)
+                    # series.recibido=request.POST['recibido']
+                    # print(series.recibido)
+
                     data = form.save()
             else:
                 data['error'] = 'No ha ingresado una opción'
@@ -197,8 +194,8 @@ class PurchaseSerieCreateView(PermissionMixin, CreateView):
         context['frmSeries'] = SeriesCompraForm()
 
         context['iva'] = Company.objects.first().get_iva()
-        #context['frmSeries'] = SeriesCompraForm()
-        #context['frmClient'] = ClientForm()
+        # context['frmSeries'] = SeriesCompraForm()
+        # context['frmClient'] = ClientForm()
 
         context['list_url'] = self.success_url
         context['title'] = 'Nuevo registro de una Orden de Compra'
@@ -229,7 +226,7 @@ class PurchaseSerieDeleteView(PermissionMixin, DeleteView):
 
 
 class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
-    model = PurchaseRequest    
+    model = PurchaseRequest
     template_name = 'scm/serie/create.html'
     form_class = PurchaseRequestForm
     success_url = reverse_lazy('purchaseserie_list')
@@ -256,7 +253,6 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
             pass
         return JsonResponse(data)
 
-
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
         return super().dispatch(request, *args, **kwargs)
@@ -264,7 +260,7 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
     def get_form(self, form_class=None):
         instance = self.get_object()
         form = PurchaseRequestForm(instance=instance)
-        #form.fields['client'].queryset = Client.objects.filter(id=instance.client.id)
+        # form.fields['client'].queryset = Client.objects.filter(id=instance.client.id)
         return form
 
     def post(self, request, *args, **kwargs):
@@ -272,35 +268,34 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
         data = {}
         try:
             if action == 'edit':
-                print('edit')
                 with transaction.atomic():
-                    #sale = Sale.objects.get(pk=self.get_object().id)
-                    purchaseorder = self.get_object()
-                    #purchaserequest.date_joined = request.POST['date_joined']
-                    #purchaserequest.state = ''
-                    #purchaserequest.sucursal_id = request.POST['sucursal']
+                    # sale = Sale.objects.get(pk=self.get_object().id)
+                    purchaseorder = self.get_object() #
+                    # purchaserequest.date_joined = request.POST['date_joined']
+                    # purchaserequest.state = ''
+                    # purchaserequest.sucursal_id = request.POST['sucursal']
                     purchaseorder.provider_id = int(request.POST['provider'])
-                    print('provider_id',purchaseorder.provider_id)
+                    print('provider_id', purchaseorder.provider_id)
                     purchaseorder.payment_condition = request.POST['payment_condition']
-                    print('payment_condition',purchaseorder.payment_condition)
+                    print('payment_condition', purchaseorder.payment_condition)
                     purchaseorder.date_joined = request.POST['date_joined']
-                    print('date_joined',purchaseorder.date_joined)                  
+                    print('date_joined', purchaseorder.date_joined)
                     purchaseorder.state = "Recibido"
-                    print('state',purchaseorder.state )
+                    print('state', purchaseorder.state)
                     purchaseorder.concepto = request.POST['concepto']
-                    print('concepto',purchaseorder.concepto)
+                    print('concepto', purchaseorder.concepto)
                     purchaseorder.plazo_id = request.POST['plazo']
-                    print('plazo_id',purchaseorder.plazo_id)
+                    print('plazo_id', purchaseorder.plazo_id)
                     purchaseorder.sucursal_id = request.POST['sucursal']
-                    print('sucursal_id',purchaseorder.sucursal_id)
+                    print('sucursal_id', purchaseorder.sucursal_id)
                     purchaseorder.dscto = float(request.POST['dscto'])
-                    print('dscto',purchaseorder.dscto)
+                    print('dscto', purchaseorder.dscto)
                     purchaseorder.iva = float(Company.objects.first().iva) / 100
-                    print( 'iva',purchaseorder.iva)
+                    print('iva', purchaseorder.iva)
                     purchaseorder.total = float(request.POST['total'])
-                    print( 'total',purchaseorder.total)
+                    print('total', purchaseorder.total)
                     purchaseorder.subtotal = float(request.POST['subtotal'])
-                    print( 'subtotal',purchaseorder.subtotal)
+                    print('subtotal', purchaseorder.subtotal)
                     purchaseorder.save()
                     purchaseorder.purchaserequestdetail_set.all().delete()
 
@@ -311,20 +306,29 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
                         det.product_id = prod.id
                         det.price = float(i['pricemod'])
                         det.cant = int(i['cant'])
-                        #det.recb = int(i['recb'])
-                        det.subtotal = det.price * det.cant
-                        #det.dscto = float(i['dscto']) 
-                        #saledetail.total_dscto = saledetail.dscto * saledetail.subtotal
-                        det.subtotal = det.cant * float(det.price)                       
+                        # det.recb = int(i['recb'])
+                        det.subtotal = float(det.price) * det.cant
+                        # det.dscto = float(i['dscto'])
+                        # saledetail.total_dscto = saledetail.dscto * saledetail.subtotal
+                        det.subtotal = det.cant * float(det.price)
                         det.save()
 
-                        #saledetail.product.stock -= saledetail.cant
+                        for s in i['series']:
+                            dets = AsignaSerie()
+                            dets.numfactpro = s['numfactpro']
+                            dets.serie = s['serie']
+                            dets.producto_id = det.product_id
+                            dets.cantped = 1
+                            dets.cantent = 1
+                            dets.sucursal_id = purchaseorder.sucursal_id
+                            dets.provider_id = purchaseorder.provider_id
+                            dets.save() # sale un error al intentar guardar
+
+                        # saledetail.product.stock -= saledetail.cant
                         det.product.save()
 
-                    #purchaserequest.calculate_invoice()
+                    # purchaserequest.calculate_invoice()
 
-                  
-                       
                     data = {'id': purchaseorder.id}
             elif action == 'search_products':
                 data = []
@@ -357,9 +361,6 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
 
                     seriesasignarcompra.demanda = request.POST['demanda']
                     seriesasignarcompra.recibido = request.POST['recibido']
-                    
-
-
 
                     seriesasignarcompra.save()
                     print('guarda solicitud')
@@ -369,42 +370,33 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
                         print(json.loads(request.POST['productos']))
 
                         det = SerieDetail()
-                        print('iiiid',seriesasignarcompra.id)
+                        print('iiiid', seriesasignarcompra.id)
                         det.serie_id = seriesasignarcompra.id
-                        print('ddc',det.serie_id)
+                        print('ddc', det.serie_id)
                         print(p)
                         det.nuserie = (p)
-                        print('ddcc',det.nuserie)
+                        print('ddcc', det.nuserie)
                         det.save()
-
-
-
-     
             else:
                 data['error'] = 'No ha ingresado una opción'
         except Exception as e:
             data['error'] = str(e)
         return HttpResponse(json.dumps(data), content_type='application/json')
 
-
     def get_details_product(self):
-        data=[]
+        data = []
         try:
             for i in PurchaseRequestDetail.objects.filter(purchaserequest_id=self.get_object().id):
-                print('entra valor prod',i)
+                print('entra valor prod', i)
                 item = i.product.toJSON()
                 item['cant'] = i.cant
                 item['pricemod'] = float(i.price)
-                print(item['cant'])
-                #item['dscto']= float(i.dscto)
-                #print(item)
+                item['series'] = [{'serie': s.serie, 'numfactpro': s.numfactpro} for s in i.product.asignaserie_set.all()]
                 data.append(item)
 
         except:
             pass
         return data
-
-
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
@@ -416,7 +408,6 @@ class PurchaseSerieUpdateView(PermissionMixin, UpdateView):
         context['action'] = 'edit'
         context['iva'] = Company.objects.first().get_iva()
 
-        #context['iva'] = Company.objects.first().get_iva()
+        # context['iva'] = Company.objects.first().get_iva()
         context['det'] = json.dumps(self.get_details_product())
         return context
-

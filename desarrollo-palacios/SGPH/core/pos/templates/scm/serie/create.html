@@ -11,7 +11,6 @@
     <script src="{% static 'lib/tempusdominus-bootstrap-4.5.37.0/js/tempusdominus-bootstrap.js' %}"></script>
     <link rel="stylesheet" href="{% static 'lib/tempusdominus-bootstrap-4.5.37.0/css/tempusdominus-bootstrap.css' %}"/>
     <link type="text/css" rel="stylesheet" href="{% static 'scm/serie/admin/js/css/estil.css' %}">
-
     <script src="{% static 'scm/serie/admin/js/form.js' %}"></script>
 {% endblock %}
 
@@ -19,8 +18,6 @@
     <form class="form" method="post" action="." enctype="multipart/form-data" id="frmPurchase"
           data-url="{% url 'purchaseserie_list' %}">
         <div class="card {{ dshboard.card }}">
-
-            <body onload="miFuncion();" >
 
             <div class="card-header">
                 <h3 class="card-title">
@@ -55,7 +52,7 @@
                                 {{ form.concepto }}
                             </div>
                         </div>
-                          <div class="col-lg-2" id="suc">
+                        <div class="col-lg-2" id="suc">
                             <div class="form-group">
                                 <label class="control-label">Ubicación de destino:</label>
                                 {{ form.sucursal }}
@@ -67,7 +64,7 @@
                                 {{ form.state.as_hiden }}
                             </div>
                         </div>
-                       
+
                         <div class="col-lg-5" id="provedapro">
                             <div class="form-group">
                                 <label class="control-label">Recibir de:</label>
@@ -82,16 +79,19 @@
                                             <a class="dropdown-item btnAddProvider">
                                                 <i class="fas fa-plus"></i> Crear proveedor
                                             </a>
-                                            <input type="hidden" class="form-control" readonly name="valest" id="valest" value={{form.state.value}}>
-                                            <input type="hidden" class="form-control" readonly name="valcant" id="valcant" value={{form.state.value}}>
-                                            <input type="hidden" class="form-control" readonly name="valprod" id="valprod" value={{form.state.value}}>
+                                            <input type="hidden" class="form-control" readonly name="valest" id="valest"
+                                                   value={{ form.state.value }}>
+                                            <input type="hidden" class="form-control" readonly name="valcant"
+                                                   id="valcant" value={{ form.state.value }}>
+                                            <input type="hidden" class="form-control" readonly name="valprod"
+                                                   id="valprod" value={{ form.state.value }}>
 
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       <!--{{ form.payment_condition.as_hiden }}-->
+                        <!--{{ form.payment_condition.as_hiden }}-->
                         <!--{{ form.instance.payment_condition }}-->
                         <!--<input type="hidden" name="content" value="{{payment_condition}}">-->
 
@@ -100,7 +100,8 @@
                                 <label class="control-label">Forma de pago:</label>
                                 {{ form.payment_condition }}
                             </div>
-                        </div>-
+                        </div>
+                        -
                         <div class="col-lg-2" id="dpl" style="display:none">
                             <div class="form-group">
                                 <label class="control-label">Plazo de pago:</label>
@@ -127,7 +128,7 @@
                             <div class="form-group">
                                 <label class="control-label">Iva %:</label>
                                 {{ form.iva }}
-                                {{form.total_iva.as_hiden}}
+                                {{ form.total_iva.as_hiden }}
                             </div>
                         </div>
                         <div class="col-lg-2" style="display:none">
@@ -143,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <hr>
                     <div class="row">
                         <div class="col-lg-12">
@@ -175,13 +176,11 @@
                             <table width="100%" class="table table-bordered display nowrap" id="tblProducts">
                                 <thead>
                                 <tr>
-                                   
-                                   <th style="width: 10%;"></th>
+
+                                    <th style="width: 25%;">Series</th>
                                     <th style="width: 25%;">Producto</th>
-                                    <!--<th style="width: 15%;">Categoría</th>-->
                                     <th style="width: 25%;">Demanda</th>
-                                    <th style="width: 15%;">Recibido</th>
-                                    <!--<th style="width: 10%;">Subtotal</th>-->
+                                    <th style="width: 25%;">Recibido</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -198,11 +197,10 @@
                 <a href="{{ list_url }}" class="btn btn-danger btn-flat" id="btnCancelar">
                     <i class="fas fa-times"></i> Cancelar
                 </a>
-                 <a href="{{ list_url }}" class="btn btn-danger btn-flat" id="btnAtras">
+                <a href="{{ list_url }}" class="btn btn-danger btn-flat" id="btnAtras">
                     <i class="fas fa-arrow-left"></i> Atrás
                 </a>
             </div>
-            </body>
         </div>
     </form>
 
@@ -238,12 +236,10 @@
             </div>
         </form>
     </div>
-
-
     <div id="myModalSearchProducts" class="modal fade" role="dialog">
         <div class="modal-dialog modal-xl">
-            <div class="modal-content" >
-                <div class="modal-header" >
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title">
                         <b><i class="fa fa-search"></i> Búsqueda de productos</b>
                     </h5>
@@ -253,7 +249,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <table width="100%" class="table table-bordered table-hover display nowrap table-sm" id="tblSearchProducts">
+                        <table width="100%" class="table table-bordered table-hover display nowrap table-sm"
+                               id="tblSearchProducts">
                             <thead>
                             <tr>
                                 <th style="width: 35%;">Nombre</th>
@@ -273,8 +270,7 @@
         </div>
     </div>
 
-
-<!--
+    <!--
     <div id="myModalSeries" class="modal fade" role="dialog">
         <link type="text/css" rel="stylesheet" href="{% static 'scm/serie/admin/js/css/estil.css' %}">
 
@@ -375,95 +371,104 @@
 
 -->
 
-    <div id="myModalSeries" class="modal fade" role="dialog">
-        <form class="form" id="frmSeries" method="POST">
-            <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="myModalSeries" tabindex="-1" role="dialog" aria-hidden="true">
+        <form method="post" id="frmSeries">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">
-                            <b><i class="fa fa-plus"></i> Registro de Serie</b>
+                            <b>Nuevo registro de series</b>
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <input type="hidden" name="action" value="{{action}}">
                         <div class="container-fluid">
-                            {% for field in frmSeries.visible_fields %}
-                                <div class="form-group">
-                                    <label>{{ field.label }}:</label>
-                                    {{ field|add_class:'form-control'|attr:'autocomplete:off' }}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <label>{{ frmSeries.numfactpro.label }}</label>
+                                        {{ frmSeries.numfactpro }}
+                                    </div>
+
                                 </div>
-                            {% endfor %}
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <label>{{ frmSeries.serie.label }}</label>
+                                        {{ frmSeries.serie }}
 
-                            <table width="100%" class="table table-bordered table-hover display nowrap table-sm" id="tblSerie">
-                            <thead>
-                            <tr>
-                                <th style="width: 25%;">Número de Serie</th>
-                                <th style="width: 5%;"></th>
+                                    </div>
 
-                                
-                            </tr>
-                            </thead>
-                            <tbody>                           
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td><input type="text"  class="form-control"  id="serieag" class="serieag" name="serieag" value=""></td>
-                                    <td><button type="button" class="btn btn-danger btn-xs btn-delete"><i class="fa fa-trash fa-1x"></i></button></td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <table width="100%" class="table table-bordered table-sm" id="tblSeries">
+                                        <thead>
+                                        <tr>
+                                            <th>Eliminar</th>
+                                            <th>Factura</th>
+                                            <th>Serie</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary btn-flat btn-block">
-                            <i class="fas fa-save"></i> Guardar registro
+                        <button type="submit" class="btn btn-primary btn-flat">
+                            <i class="fas fa-save"></i> Registrar
                         </button>
                     </div>
                 </div>
             </div>
         </form>
-
     </div>
 
-<script type="application/javascript">
-
-function miFuncion() {    // run code
-
-    var valest = $('input[name="valest"]').val();
-    console.log('xxxxxt', valest);
-    if (valest == "Aprobado") {
-
-        console.log('entra por');    
-        $("#suc").addClass("disabled");        
-        $("#provedapro").addClass("disabled"); 
-        $("#date_joined").addClass("disabled");          
-        $('#btpr').children('div').hide();
-        $('#titprofd').children('div').hide();
-        $("#btnAtras").hide();
-    } 
-        if (valest == "Recibido") {
-
-        console.log('entra por');    
-        $("#suc").addClass("disabled");        
-        $("#provedapro").addClass("disabled"); 
-        $("#date_joined").addClass("disabled");          
-        $('#btpr').children('div').hide();
-        $('#titprofd').children('div').hide();
-        $("#tblProducts").addClass("disabled"); 
-
-        $("#btnGuardar").hide();
-        $("#btnCancelar").hide();
-        $("#btnAtras").show();
-    } 
-
-};
-</script>
 
 
- <script type="application/javascript">
+    <script type="application/javascript">
+
+        function miFuncion() {    // run code
+
+            var valest = $('input[name="valest"]').val();
+            console.log('xxxxxt', valest);
+            if (valest == "Aprobado") {
+
+                console.log('entra por');
+                $("#suc").addClass("disabled");
+                $("#provedapro").addClass("disabled");
+                $("#date_joined").addClass("disabled");
+                $('#btpr').children('div').hide();
+                $('#titprofd').children('div').hide();
+                $("#btnAtras").hide();
+            }
+            if (valest == "Recibido") {
+
+                console.log('entra por');
+                $("#suc").addClass("disabled");
+                $("#provedapro").addClass("disabled");
+                $("#date_joined").addClass("disabled");
+                $('#btpr').children('div').hide();
+                $('#titprofd').children('div').hide();
+                $("#tblProducts").addClass("disabled");
+
+                $("#btnGuardar").hide();
+                $("#btnCancelar").hide();
+                $("#btnAtras").show();
+            }
+
+        };
+    </script>
+
+
+    <script type="application/javascript">
         purchase.details.iva = parseFloat('{{ iva }}');
         $(function () {
             console.log('iva');
@@ -476,10 +481,11 @@ function miFuncion() {    // run code
             purchase.list_products();
         });
     </script>
-     <script>
+#Funcion
+    <script>
         console.log('act');
         purchase.details.products = {{ det|safe}};
+        console.log(purchase.details.products);
         purchase.list_products();
-        
     </script>
 {% endblock %}

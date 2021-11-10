@@ -9,7 +9,7 @@ from django.db.models.functions import Coalesce
 from django.forms import model_to_dict
 
 from config import settings
-from core.pos.choices import payment_condition, payment_method, voucher,state_sale, state_request,state_transfer
+from core.pos.choices import payment_condition, payment_method, voucher, state_sale, state_request, state_transfer
 from core.user.models import User
 
 
@@ -70,14 +70,12 @@ class Provider(models.Model):
         ordering = ['-id']
 
 
-
-
 class Payment(models.Model):
     name = models.CharField(max_length=150, verbose_name='Título', unique=True)
     desc = models.CharField(max_length=500, null=True, blank=True, verbose_name='Descripción')
 
     def __str__(self):
-        return self.name 
+        return self.name
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -89,19 +87,13 @@ class Payment(models.Model):
         ordering = ['id']
 
 
-
-
-
-
-
-
 class Sucursal(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nombre', unique=True)
     ubic = models.CharField(max_length=500, null=True, blank=True, verbose_name='Ubicación')
     serie = models.CharField(max_length=30, null=True, blank=True, verbose_name='Serie')
 
     def __str__(self):
-        return self.ubic 
+        return self.ubic
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -113,16 +105,12 @@ class Sucursal(models.Model):
         ordering = ['id']
 
 
-
-
 class Mark(models.Model):
-    
     marca = models.CharField(max_length=100, verbose_name='Marca', null=True, blank=True)
     descripcion = models.CharField(max_length=100, verbose_name='Descripción', null=True, blank=True)
 
-
     def __str__(self):
-        return self.marca 
+        return self.marca
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -155,7 +143,6 @@ class Category(models.Model):
         verbose_name_plural = 'Categorias'
         ordering = ['-id']
 
-
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Nombre')
     category = models.ForeignKey(Category, on_delete=models.PROTECT, verbose_name='Categoría')
@@ -163,18 +150,14 @@ class Product(models.Model):
     pvp = models.DecimalField(max_digits=9, decimal_places=2, default=0.00, verbose_name='Precio de Venta')
     image = models.ImageField(upload_to='product/%Y/%m/%d', verbose_name='Imagen', null=True, blank=True)
     stock = models.IntegerField(default=0)
-    #serie = models.CharField(max_length=150, verbose_name='Serie')
-    codigo = models.CharField(max_length=150,unique=True, verbose_name='Código')
-    referencia = models.CharField(max_length=150,unique=True, verbose_name='Referencia')
+    # serie = models.CharField(max_length=150, verbose_name='Serie')
+    codigo = models.CharField(max_length=150, unique=True, verbose_name='Código')
+    referencia = models.CharField(max_length=150, unique=True, verbose_name='Referencia')
     detalle = models.CharField(null=True, max_length=250, verbose_name='Detalle')
     stockmax = models.IntegerField(default=0, verbose_name='Stock Máximo')
     stockmin = models.IntegerField(default=0, verbose_name='Stock Mínimo')
     marca = models.ForeignKey(Mark, on_delete=models.PROTECT, verbose_name='Marca')
     modelo = models.CharField(max_length=150, verbose_name='Modelo')
-
-
-    
-
 
     def __str__(self):
         return self.name
@@ -269,15 +252,16 @@ class Purchase(models.Model):
     class Meta:
         verbose_name = 'Compra'
         verbose_name_plural = 'Compras'
-        #default_permissions = ()
-        #permissions = (
+        # default_permissions = ()
+        # permissions = (
         #    ('view_purchase', 'Can view Compras'),
         #    ('add_purchase', 'Can add Compras'),
         #    ('delete_purchase', 'Can delete Compras'),
-        #)
+        # )
         ordering = ['-id']
 
-#------------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------------
 class PurchaseDetail(models.Model):
     purchase = models.ForeignKey(Purchase, on_delete=models.PROTECT)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
@@ -300,29 +284,22 @@ class PurchaseDetail(models.Model):
     class Meta:
         verbose_name = 'Detalle de Compra'
         verbose_name_plural = 'Detalle de Compras'
-        #permissions = ()
+        # permissions = ()
         ordering = ['-id']
 
-#--------------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------------------
 class PurchaseRequest(models.Model):
-    #reference=models.IntegerField(default=0)
-    date_joined=models.DateField(default=datetime.now)
+    date_joined = models.DateField(default=datetime.now)
     state = models.CharField(choices=state_request, max_length=50, default='Enviado')
     sucursal = models.ForeignKey(Sucursal, on_delete=models.PROTECT, null=True, blank=True)
-
-    #reference=models.IntegerField(default=0)
-    provider=models.ForeignKey(Provider, on_delete=models.PROTECT, null=True, blank=True)
-    concepto=models.CharField(max_length=150, verbose_name='Concepto',null=True, blank=True)
+    provider = models.ForeignKey(Provider, on_delete=models.PROTECT, null=True, blank=True)
+    concepto = models.CharField(max_length=150, verbose_name='Concepto', null=True, blank=True)
     payment_condition = models.CharField(choices=payment_condition, max_length=50, default='credito')
-    #date_joined=models.DateField(default=datetime.now)
     end_credit = models.DateField(default=datetime.now)
-    #state = models.CharField(choices=state_request, max_length=50, default='Enviado')
-    #sucursal = models.ForeignKey(Sucursal,on_delete=models.PROTECT  )
     subtotal = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-
     plazo = models.ForeignKey(Payment, on_delete=models.PROTECT, null=True, blank=True)
     employee = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
-    
     dscto = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     total_dscto = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     iva = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
@@ -330,14 +307,11 @@ class PurchaseRequest(models.Model):
     subtotaldos = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     total = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
 
-
-
     def __str__(self):
         return self.provider.name
 
     def nro(self):
         return format(self.id, '06d')
-
 
     def calculate_invoice(self):
         subtotal = 0.00
@@ -346,32 +320,29 @@ class PurchaseRequest(models.Model):
         self.subtotal = subtotal
         self.save()
 
-
-
-
     def delete(self, using=None, keep_parents=False):
         try:
-    	    for i in self.purchaserequestdetail_set.all():
+            for i in self.purchaserequestdetail_set.all():
                 i.product.stock -= i.cant
                 i.product.save()
-                i.delete()      
+                i.delete()
         except:
             pass
         super(PurchaseRequest, self).delete()
-        
+
     def toJSON(self):
         item = model_to_dict(self)
         item['nro'] = format(self.id, '06d')
         item['date_joined'] = self.date_joined.strftime('%Y-%m-%d')
         item['sucursal'] = self.sucursal.toJSON()
-        #item['state'] = {'id': self.state, 'name': self.get_estado_display()}
-        #item['plazo'] = self.plazo.toJSON()
+        # item['state'] = {'id': self.state, 'name': self.get_estado_display()}
+        # item['plazo'] = self.plazo.toJSON()
         item['end_credit'] = self.end_credit.strftime('%Y-%m-%d')
-        #item['provider'] = self.provider.toJSON()
+        # item['provider'] = self.provider.toJSON()
         item['provider'] = {} if self.provider is None else self.provider.toJSON()
         item['payment_condition'] = {'id': self.payment_condition, 'name': self.get_payment_condition_display()}
-        #item['provider'] = self.provider.toJSON()
-        #item['payment_condition'] = {'id': self.payment_condition, 'name': self.get_payment_condition_display()}
+        # item['provider'] = self.provider.toJSON()
+        # item['payment_condition'] = {'id': self.payment_condition, 'name': self.get_payment_condition_display()}
         item['subtotal'] = format(self.subtotal, '.2f')
         item['dscto'] = format(self.dscto, '.2f')
         item['total_dscto'] = format(self.total_dscto, '.2f')
@@ -383,13 +354,11 @@ class PurchaseRequest(models.Model):
 
         return item
 
-
-
-    #def calculate_invoice(self):
+    # def calculate_invoice(self):
     #    subtotal = 0.00
     #    for d in self.purchaserequestdetail_set.all():
     #        d.subtotal = float(d.price) * int(d.cant)
-            #d.total_dscto = float(d.dscto) * float(d.subtotal)
+    # d.total_dscto = float(d.dscto) * float(d.subtotal)
     #        d.total = d.subtotal 
     #        d.save()
     #        subtotal += d.total
@@ -408,56 +377,60 @@ class PurchaseRequest(models.Model):
         except:
             pass
         super(PurchaseRequest, self).delete()
-       
+
     class Meta:
         verbose_name = 'Solicitud de Compra'
         verbose_name_plural = 'Solicitudes de Compras'
-  
-        ordering = ['-id']   
 
-#----------------------------------------------------------------------------------
+        ordering = ['-id']
+
+    # ----------------------------------------------------------------------------------
+
+
 class PurchaseRequestDetail(models.Model):
     purchaserequest = models.ForeignKey(PurchaseRequest, on_delete=models.PROTECT)
-    product=models.ForeignKey(Product, on_delete=models.PROTECT)
-    cant=models.IntegerField(default=0)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    cant = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-    #dscto = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
+    # dscto = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     subtotal = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
 
     def __str__(self):
-    	return self.product.name
+        return self.product.name
 
     def toJSON(self):
         item = model_to_dict(self, exclude=['purchaserequest'])
         item['product'] = self.product.toJSON()
         item['price'] = format(self.price, '.2f')
-        #item['dscto'] = format(self.dscto, '.2f')
+        # item['dscto'] = format(self.dscto, '.2f')
         item['subtotal'] = format(self.subtotal, '.2f')
         return item
-        #item['price'] = format(self.price, '.2f')
-        #item['dscto'] = format(self.dscto, '.2f')
-        #item['subtotal'] = format(self.subtotal, '.2f')	
-    	#return item
-    	
-    	
+        # item['price'] = format(self.price, '.2f')
+        # item['dscto'] = format(self.dscto, '.2f')
+        # item['subtotal'] = format(self.subtotal, '.2f')
+
+    # return item
+
     class Meta:
         verbose_name = 'Detalle de solicitud de Compra'
         verbose_name_plural = 'Detalle de solicitud de Compra'
-        #permissions= ()
-        ordering = ['-id']   
+        # permissions= ()
+        ordering = ['-id']
 
-#--------------------------------------------------------------------------------------------------   
+    # --------------------------------------------------------------------------------------------------
+
+
 class PurchaseOrder(models.Model):
-    reference=models.IntegerField(default=0)
-    provider=models.ForeignKey(Provider, on_delete=models.PROTECT)
-    concepto=models.CharField(max_length=150, verbose_name='Nombre')
+    reference = models.IntegerField(default=0)
+    provider = models.ForeignKey(Provider, on_delete=models.PROTECT)
+    concepto = models.CharField(max_length=150, verbose_name='Nombre')
     payment_condition = models.CharField(choices=payment_condition, max_length=50, default='contado')
-    date_joined=models.DateField(default=datetime.now)
+    date_joined = models.DateField(default=datetime.now)
     end_credit = models.DateField(default=datetime.now)
     state = models.CharField(choices=state_request, max_length=50, default='Enviado')
-    sucursal = models.ForeignKey(Sucursal,on_delete=models.PROTECT  )
+    sucursal = models.ForeignKey(Sucursal, on_delete=models.PROTECT)
     subtotal = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-    
+
     def __str__(self):
         return self.provider.name
 
@@ -470,12 +443,12 @@ class PurchaseOrder(models.Model):
 
     def delete(self, using=None, keep_parents=False):
         try:
-    	    for i in self.purchaserequestdetail_set.all():
-    	        i.product.stock -= i.cant
+            for i in self.purchaserequestdetail_set.all():
+                i.product.stock -= i.cant
         except:
             pass
         super(PurchaseOrder, self).delete()
-        
+
     def toJSON(self):
         item = model_to_dict(self)
         item['nro'] = format(self.id, '06d')
@@ -488,46 +461,50 @@ class PurchaseOrder(models.Model):
         item['payment_condition'] = {'id': self.payment_condition, 'name': self.get_payment_condition_display()}
         item['subtotal'] = format(self.subtotal, '.2f')
         return item
-        
+
     class Meta:
         verbose_name = 'Orden de Compra'
         verbose_name_plural = 'Ordenes de Compra'
-        #default_permissions = ()
-        
-        #permissions = (
+        # default_permissions = ()
+
+        # permissions = (
         #    ('view_purchaseorder', 'Can view OrdenCompra'),
         #    ('add_purchaseorder', 'Can add OrdenCompra'),
         #    ('delete_purchaseorder', 'Can delete OrdenCompra'),
-    #)
-        ordering = ['-id']   
+        # )
+        ordering = ['-id']
 
-#----------------------------------------------------------------------------------
+    # ----------------------------------------------------------------------------------
+
+
 class PurchaseOrderDetail(models.Model):
     purchaseorder = models.ForeignKey(PurchaseOrder, on_delete=models.PROTECT)
-    product=models.ForeignKey(Product, on_delete=models.PROTECT)
-    cant=models.IntegerField(default=0)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    cant = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-    dscto=models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-    subtotal=models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
-   
-    def __str__(self):
-       return self.product.name
-    
-    def toJSON(self):
-        item= model_to_dict(self,)
+    dscto = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
+    subtotal = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
 
-        item['product']=self.product.toJSON()
-        item['price']=format(self.price, '.2f')
-        item['dscto']=format(self.dscto, '.2f')
-        item['subtotal']=format(self.subtotal, '.2f')
+    def __str__(self):
+        return self.product.name
+
+    def toJSON(self):
+        item = model_to_dict(self, )
+
+        item['product'] = self.product.toJSON()
+        item['price'] = format(self.price, '.2f')
+        item['dscto'] = format(self.dscto, '.2f')
+        item['subtotal'] = format(self.subtotal, '.2f')
         return item
 
     class Meta:
         verbose_name = 'Detalle de Compra'
         verbose_name_plural = 'Detalle de Compras'
-        #permissions = ()
+        # permissions = ()
         ordering = ['-id']
-#----------------------------------------------------------------------------------
+
+
+# ----------------------------------------------------------------------------------
 class Client(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     mobile = models.CharField(max_length=10, unique=True, verbose_name='Teléfono')
@@ -552,15 +529,13 @@ class Client(models.Model):
         ordering = ['-id']
 
 
-
-
 class PriceList(models.Model):
-
-    name = models.CharField(max_length=200, null=True, blank=True, verbose_name='Título') 
-    dia = models.IntegerField( null=True, blank=True, verbose_name='Plazos de Pago')
+    name = models.CharField(max_length=200, null=True, blank=True, verbose_name='Título')
+    dia = models.IntegerField(null=True, blank=True, verbose_name='Plazos de Pago')
     tiemp = models.CharField(max_length=100, null=True, blank=True, verbose_name='Tiempo Diferido')
     desc = models.DecimalField(blank=True, default=0.00, max_digits=9, decimal_places=2, verbose_name='Descuento %')
-    tipo = models.CharField(max_length=10, choices=payment_condition, verbose_name='Tipo de Pago', blank=False, null=False)
+    tipo = models.CharField(max_length=10, choices=payment_condition, verbose_name='Tipo de Pago', blank=False,
+                            null=False)
 
     def __str__(self):
         return self.name
@@ -577,15 +552,9 @@ class PriceList(models.Model):
         ordering = ['id']
 
 
-
-
-
-
 class Cards(models.Model):
-
-    name = models.CharField(max_length=200, null=True, blank=True, verbose_name='Título') 
+    name = models.CharField(max_length=200, null=True, blank=True, verbose_name='Título')
     porc = models.DecimalField(blank=True, default=0.00, max_digits=9, decimal_places=2, verbose_name='Porcentaje %')
- 
 
     def __str__(self):
         return self.name
@@ -600,7 +569,6 @@ class Cards(models.Model):
         verbose_name = 'Cards'
         verbose_name_plural = 'Cards'
         ordering = ['id']
-
 
 
 class Sale(models.Model):
@@ -710,12 +678,12 @@ class Sale(models.Model):
     class Meta:
         verbose_name = 'Venta'
         verbose_name_plural = 'Ventas'
-        #default_permissions = ()
-        #permissions = (
+        # default_permissions = ()
+        # permissions = (
         #    ('view_sale', 'Can view Ventas'),
         #    ('add_sale', 'Can add Ventas'),
         #    ('delete_sale', 'Can delete Ventas'),
-        #)
+        # )
         ordering = ['-id']
 
 
@@ -745,9 +713,8 @@ class SaleDetail(models.Model):
     class Meta:
         verbose_name = 'Detalle de Venta'
         verbose_name_plural = 'Detalle de Ventas'
-        #default_permissions = ()
+        # default_permissions = ()
         ordering = ['-id']
-
 
 
 class QuotationSale(models.Model):
@@ -771,7 +738,7 @@ class QuotationSale(models.Model):
     amount_debited = models.DecimalField(max_digits=9, decimal_places=2, default=0.00)
     plazo = models.ForeignKey(PriceList, on_delete=models.CASCADE, null=True, blank=True)
     entrada = models.DecimalField(default=0.00, max_digits=9, decimal_places=2)
-    
+
     def __str__(self):
         return self.client.user.get_full_name()
 
@@ -1103,22 +1070,16 @@ class PromotionsDetail(models.Model):
         ordering = ['-id']
 
 
-
-
-
 class AsignaSerie(models.Model):
     sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     producto = models.ForeignKey(Product, on_delete=models.CASCADE)
-    serie=models.CharField(max_length=150, verbose_name='Serie', null=True, blank=True,)
-    cantped=models.IntegerField(default=0, verbose_name='Demanda')
+    serie = models.CharField(max_length=150, verbose_name='Serie', null=True, blank=True, )
+    cantped = models.IntegerField(default=0, verbose_name='Demanda')
     fechaPrevista = models.DateField(default=datetime.now, verbose_name='Fecha de Llegada')
-    cantent=models.IntegerField(default=0, verbose_name='Recibo')
-    provider=models.ForeignKey(Provider, on_delete=models.CASCADE)
-    #comp = PurchaseRequestDetail.objects.filter(purchaserequest=purchaserequest).values_list('id', flat=True)
-
-
+    cantent = models.IntegerField(default=0, verbose_name='Recibo')
+    provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
     def __str__(self):
-        return self.provider 
+        return self.provider
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -1129,6 +1090,7 @@ class AsignaSerie(models.Model):
         verbose_name_plural = 'AsignaSerie'
         ordering = ['id']
 
+
 class SeriesAsignarCompra(models.Model):
     numfactpro = models.CharField(max_length=150, verbose_name="Número de Factura")
     product = models.CharField(max_length=150, verbose_name="Producto")
@@ -1136,7 +1098,6 @@ class SeriesAsignarCompra(models.Model):
     serie = models.CharField(max_length=150, null=True, blank=True, verbose_name="Serie")
 
     recibido = models.CharField(max_length=30, verbose_name="Recibido")
-
 
     def __str__(self):
         return self.numfactpro
@@ -1147,9 +1108,8 @@ class SeriesAsignarCompra(models.Model):
     def toJSON(self):
         item = model_to_dict(self, exclude=[''])
         item['nro'] = format(self.id, '06d')
-        #item['product'] = self.product.toJSON()
+        # item['product'] = self.product.toJSON()
         return item
-
 
     class Meta:
         verbose_name = 'SeriesAsignarCompra'
@@ -1158,11 +1118,9 @@ class SeriesAsignarCompra(models.Model):
 
 
 class SerieDetail(models.Model):
-
     serie = models.ForeignKey(SeriesAsignarCompra, on_delete=models.PROTECT)
-    #cantrec = models.IntegerField(default=0)
-    nuserie= models.CharField(max_length=150, unique=True)
-
+    # cantrec = models.IntegerField(default=0)
+    nuserie = models.CharField(max_length=150, unique=True)
 
     def __str__(self):
         return self.nuserie
@@ -1174,21 +1132,22 @@ class SerieDetail(models.Model):
     class Meta:
         verbose_name = 'Detalle de Serie'
         verbose_name_plural = 'Detalle de Series'
-        ordering = ['-id']        
-
+        ordering = ['-id']
 
 
 class Operation(models.Model):
     date_joined = models.DateField(default=datetime.now, verbose_name='Fecha de Salida')
-    sucorigen = models.ForeignKey(Sucursal, on_delete=models.CASCADE, related_name="sucorigen_fixturetables",verbose_name='Sucursal Origen')
-    sucdestino = models.ForeignKey(Sucursal, on_delete=models.CASCADE, related_name="sucdestino_fixturetables",verbose_name='Sucursal Destino')
+    sucorigen = models.ForeignKey(Sucursal, on_delete=models.CASCADE, related_name="sucorigen_fixturetables",
+                                  verbose_name='Sucursal Origen')
+    sucdestino = models.ForeignKey(Sucursal, on_delete=models.CASCADE, related_name="sucdestino_fixturetables",
+                                   verbose_name='Sucursal Destino')
     cant = models.IntegerField(default=0, verbose_name='Cantidad')
     state = models.CharField(choices=state_transfer, max_length=50, default='Transferencia Realizada')
     observacion = models.CharField(max_length=150, verbose_name='Observación', null=True, blank=True)
     employee = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
 
     def __str__(self):
-        return self.provider.name 
+        return self.provider.name
 
     def nro(self):
         return format(self.id, '06d')
@@ -1206,18 +1165,18 @@ class Operation(models.Model):
 
     def toJSON(self):
         item = model_to_dict(self)
-        item['nro']=format(self.id, '06d')
-        item['data_joined']=self.data_joined.strftime('%Y-%m-%d')
-        item['sucorigen']=self.sucorigen.toJSON()
-        item['sucdestino']=self.sucdestino.toJSON()
-        item['provider']={}if self.provider is None else self.provider.toJSON()
+        item['nro'] = format(self.id, '06d')
+        item['data_joined'] = self.data_joined.strftime('%Y-%m-%d')
+        item['sucorigen'] = self.sucorigen.toJSON()
+        item['sucdestino'] = self.sucdestino.toJSON()
+        item['provider'] = {} if self.provider is None else self.provider.toJSON()
 
         return item
 
     def delete(self, using=None, keep_parents=False):
         try:
             for i in self.operationdetail_set.filter(product__category__inventoried=True):
-                i.product.stock +=  i.cant
+                i.product.stock += i.cant
                 i.product.save()
                 i.delete()
         except:
@@ -1229,43 +1188,41 @@ class Operation(models.Model):
         verbose_name_plural = 'Transferencias de Mercaderia'
         ordering = ['-id']
 
-#-------------------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------------
 class OperationDetail(models.Model):
-    operation=models.ForeignKey(Operation, on_delete=models.PROTECT)
-    product=models.ForeignKey(Product, on_delete=models.PROTECT)
-    cant=models.IntegerField(default=0)
+    operation = models.ForeignKey(Operation, on_delete=models.PROTECT)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    cant = models.IntegerField(default=0)
 
     def __str__(self):
         return self.product.name
 
     def toJSON(self):
         item = model_to_dict(self, exclude=['operation'])
-        item['product']=self.product.toJSON()
+        item['product'] = self.product.toJSON()
         return item
 
     class Meta:
-        verbose_name='Detalle de Transferencia'
-        verbose_name_plural = 'Detalle de Transferencias'    
+        verbose_name = 'Detalle de Transferencia'
+        verbose_name_plural = 'Detalle de Transferencias'
 
-        ordering = ['-id']    
-
-
+        ordering = ['-id']
 
 
 class Refund(models.Model):
     fechaOrigen = models.DateField(default=datetime.now, verbose_name='Fecha de Creación ')
     sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     provider = models.ForeignKey(Provider, on_delete=models.CASCADE, verbose_name='Proveedor')
-    fechaIngreso = models.DateField(default=datetime.now, verbose_name='Fecha de Ingreso de Mercadería ')    
-    product= models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Producto')
+    fechaIngreso = models.DateField(default=datetime.now, verbose_name='Fecha de Ingreso de Mercadería ')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Producto')
     cant = models.IntegerField(default=0, verbose_name='Cantidad')
-    serie = models.CharField(max_length=150, verbose_name='Serie')  
-    #estado = models.CharField(choices=state_refunds, max_length=80, default='Realizado')
+    serie = models.CharField(max_length=150, verbose_name='Serie')
+    # estado = models.CharField(choices=state_refunds, max_length=80, default='Realizado')
     motivo = models.CharField(max_length=200, verbose_name='Motivo', null=True, blank=True)
 
-
     def __str__(self):
-        return self.provider 
+        return self.provider
 
     def toJSON(self):
         item = model_to_dict(self)
@@ -1277,19 +1234,16 @@ class Refund(models.Model):
         ordering = ['id']
 
 
-
 class Warehouse(models.Model):
-    referencia=models.CharField(max_length=150, verbose_name='Nombre de Bodega', null=True, blank=True,)
+    referencia = models.CharField(max_length=150, verbose_name='Nombre de Bodega', null=True, blank=True, )
     sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
-    encargado=models.CharField(max_length=150, verbose_name='Encargado de Bodega', null=True, blank=True,)
-    stock=models.IntegerField(default=0, verbose_name='Stock')
-    stockmax=models.IntegerField(default=0, verbose_name='Stock Máximo')
-    stockmin=models.IntegerField(default=0, verbose_name='Stock Mínimo')
-    
-
+    encargado = models.CharField(max_length=150, verbose_name='Encargado de Bodega', null=True, blank=True, )
+    stock = models.IntegerField(default=0, verbose_name='Stock')
+    stockmax = models.IntegerField(default=0, verbose_name='Stock Máximo')
+    stockmin = models.IntegerField(default=0, verbose_name='Stock Mínimo')
 
     def __str__(self):
-        return self.encargado 
+        return self.encargado
 
     def toJSON(self):
         item = model_to_dict(self)

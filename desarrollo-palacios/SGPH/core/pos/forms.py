@@ -69,7 +69,7 @@ class ProductForm(ModelForm):
             'name': forms.TextInput(attrs={'placeholder': 'Ingrese un nombre'}),
             'category': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
             'price': forms.TextInput(),
-            'pvp': forms.TextInput(attrs={'readonly':True}),
+            'pvp': forms.TextInput(attrs={'readonly': True}),
         }
         exclude = ['stock']
 
@@ -116,9 +116,11 @@ class PurchaseForm(ModelForm):
             }),
         }
 
+
 class PurchaseRequestForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
     class Meta:
         model = PurchaseRequest
         fields = '__all__'
@@ -143,7 +145,7 @@ class PurchaseRequestForm(ModelForm):
             }), 'subtotal': forms.TextInput(attrs={
                 'class': 'form-control',
                 'autocomplete': 'off'
-            }),'concepto': forms.TextInput(attrs={
+            }), 'concepto': forms.TextInput(attrs={
                 'class': 'form-control',
                 'autocomplete': 'off'
             }),
@@ -155,21 +157,23 @@ class PurchaseRequestForm(ModelForm):
             }),
             'subtotal': forms.TextInput(attrs={
                 'class': 'form-control',
-                'disabled': True            
+                'disabled': True
             }),
             'iva': forms.TextInput(attrs={
                 'class': 'form-control',
-                'disabled': True            
+                'disabled': True
             }),
             'total': forms.TextInput(attrs={
                 'class': 'form-control',
-                'disabled': True            
+                'disabled': True
             }),
             'dscto': forms.TextInput(attrs={
                 'class': 'form-control',
             }),
         }
-#----------------------------------------------------------------------------------------------------------------
+
+
+# ----------------------------------------------------------------------------------------------------------------
 class PurchaseOrderForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -209,10 +213,11 @@ class PurchaseOrderForm(ModelForm):
                 'class': 'form-control',
                 'autocomplete': 'off'
             }),
-           
+
         }
 
-#----------------------------------------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------------------------------------
 class TypeExpenseForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -366,12 +371,7 @@ class ClientForm(ModelForm):
     }), label='Imagen')
 
 
-
-
-
-
-
-#Payment
+# Payment
 class PaymentForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -406,11 +406,7 @@ class PaymentForm(ModelForm):
         return data
 
 
-
-
-
-
-#PriceList
+# PriceList
 class PriceListForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -444,7 +440,8 @@ class PriceListForm(ModelForm):
             data['error'] = str(e)
         return data
 
-#Cards
+
+# Cards
 class CardsForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -479,7 +476,7 @@ class CardsForm(ModelForm):
         return data
 
 
-#PriceList
+# PriceList
 class SucursalForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -520,22 +517,6 @@ class SucursalForm(ModelForm):
         return data
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class SaleForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -569,14 +550,14 @@ class SaleForm(ModelForm):
             }),
             'sucursal': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
             'recargo': forms.Select(attrs={
-                'class':'form-control',
+                'class': 'form-control',
             }),
 
             'iva': forms.TextInput(attrs={
                 'class': 'form-control form-control-sm',
                 'disabled': True
             }),
-            
+
             'total_iva': forms.TextInput(attrs={
                 'class': 'form-control form-control-sm',
                 'disabled': True
@@ -612,7 +593,7 @@ class SaleForm(ModelForm):
                 'placeholder': 'Ingrese el nombre del titular'
             }),
             'plazo': forms.Select(attrs={
-                'class':'form-control',
+                'class': 'form-control',
             }),
             'entrada': forms.TextInput(attrs={
                 'readonly': False,
@@ -640,13 +621,10 @@ class SaleForm(ModelForm):
     }))
 
 
-
-
-
 class SeriesCompraForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #self.fields['client'].queryset = Client.objects.none()
+        # self.fields['client'].queryset = Client.objects.none()
 
     class Meta:
         model = SeriesAsignarCompra
@@ -655,31 +633,28 @@ class SeriesCompraForm(ModelForm):
             'product': forms.TextInput(attrs={
                 'class': 'form-control form-control-sm',
                 'readonly': True
-                
+
             }),
-           
+
+            'serie': forms.TextInput(attrs={
+                'class': 'form-control form-control-sm',
+                'placeholder': 'Ingrese un número de serie'
+            }),
+
             'numfactpro': forms.TextInput(attrs={
                 'class': 'form-control form-control-sm',
-                'disabled': False
+                'placeholder': 'Ingrese un número de factura'
             }),
             'demanda': forms.TextInput(attrs={
                 'class': 'form-control form-control-sm',
-                'readonly': True
             }),
-            
 
             'recibido': forms.TextInput(attrs={
                 'readonly': False,
                 'class': 'form-control',
             }),
-           
+
         }
-
-
-
-
-
-
 
 
 class QuotationSaleForm(ModelForm):
@@ -754,7 +729,7 @@ class QuotationSaleForm(ModelForm):
                 'placeholder': 'Ingrese el nombre del titular'
             }),
             'plazo': forms.Select(attrs={
-                'class':'form-control',
+                'class': 'form-control',
             }),
             'entrada': forms.TextInput(attrs={
                 'readonly': False,
@@ -772,13 +747,6 @@ class QuotationSaleForm(ModelForm):
         'autocomplete': 'off',
         'disabled': True
     }))
-
-
-
-
-
-
-
 
 
 class PaymentsCtaCollectForm(ModelForm):
@@ -882,10 +850,7 @@ class PromotionsForm(ModelForm):
     }))
 
 
-
-
-
-#Transfer
+# Transfer
 class OperationForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -919,50 +884,49 @@ class OperationForm(ModelForm):
                 'value': datetime.now().strftime('%Y-%m-%d'),
                 'data-toggle': 'datetimepicker',
                 'data-target': '#end_credit'
-                 }),
+            }),
 
             'concepto': forms.TextInput(
-                    attrs={
-                        'placeholder': 'Ingrese descripción',
-                        'class': 'form-control form-control-sm',
-                        'autocomplete': 'off'
-                    }
-                ),
+                attrs={
+                    'placeholder': 'Ingrese descripción',
+                    'class': 'form-control form-control-sm',
+                    'autocomplete': 'off'
+                }
+            ),
             'observacion': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese descripción',
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
-                    }
-                ),
+                }
+            ),
             'referencia': forms.TextInput(
                 attrs={
                     'placeholder': 'Ingrese descripción',
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
-                    }
-                ),
+                }
+            ),
 
-                           
             'serie': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
 
-                    }
-                ),
+                }
+            ),
             'cant': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
 
-                    }
-                ),
+                }
+            ),
             'product': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
 
             'sucorigen': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
             'sucdestino': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
-    }
+        }
 
     def save(self, commit=True):
         data = {}
@@ -977,9 +941,7 @@ class OperationForm(ModelForm):
         return data
 
 
-
-
-#Transfer
+# Transfer
 class AsignaSerieForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -997,39 +959,34 @@ class AsignaSerieForm(ModelForm):
             'provider': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
 
             'serie': forms.TextInput(
-                    attrs={
-                        'class': 'form-control form-control-sm',
-                        'autocomplete': 'off'
-                    }
-                ),
+                attrs={
+                    'class': 'form-control form-control-sm',
+                    'autocomplete': 'off'
+                }
+            ),
             'cantped': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
-                    }
-                ),
+                }
+            ),
             'fechaPrevista': forms.DateInput(format='%Y-%m-%d', attrs={
                 'class': 'form-control datetimepicker-input',
                 'id': 'end_credit',
                 'value': datetime.now().strftime('%Y-%m-%d'),
                 'data-toggle': 'datetimepicker',
                 'data-target': '#end_credit'
-                 }),
+            }),
 
-
-                           
             'cantent': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
 
-                    }
-                ),
-          
+                }
+            ),
 
-
-
-    }
+        }
 
     def save(self, commit=True):
         data = {}
@@ -1043,7 +1000,8 @@ class AsignaSerieForm(ModelForm):
             data['error'] = str(e)
         return data
 
-#Devolución
+
+# Devolución
 class RefundForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -1059,7 +1017,7 @@ class RefundForm(ModelForm):
 
             'motivo': forms.Textarea(
                 attrs={
-                    'rows':2, 'cols':15,
+                    'rows': 2, 'cols': 15,
                     'placeholder': 'Ingrese motivo',
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
@@ -1078,29 +1036,27 @@ class RefundForm(ModelForm):
                 'value': datetime.now().strftime('%Y-%m-%d'),
                 'data-toggle': 'datetimepicker',
                 'data-target': '#end_credit'
-                 }),
-                         
+            }),
+
             'serie': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
 
-                    }
-                ),
+                }
+            ),
             'cant': forms.TextInput(
                 attrs={
                     'class': 'form-control form-control-sm',
                     'autocomplete': 'off'
 
-                    }
-                ),
+                }
+            ),
             'product': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
 
             'sucursal': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
             'provider': forms.Select(attrs={'class': 'form-control select2', 'style': 'width: 100%;'}),
-    }
-
-
+        }
 
 
 class MarkForm(ModelForm):
@@ -1145,7 +1101,6 @@ class WarehouseForm(ModelForm):
             'stockmax': forms.TextInput(attrs={'placeholder': 'Ingrese un nombre'}),
             'stockmin': forms.TextInput(attrs={'placeholder': 'Ingrese un nombre'}),
 
-
         }
 
     def save(self, commit=True):
@@ -1158,7 +1113,3 @@ class WarehouseForm(ModelForm):
         except Exception as e:
             data['error'] = str(e)
         return data
-
-
-
-
